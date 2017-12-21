@@ -1,0 +1,38 @@
+Salesman was created: FullName 1 login 1 and password 1, result true
+Salesman was created: FullName 2 login 2 and password 2, result true
+Salesman try connect with login asd and password asd,result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:40:57.017, closeTime=null} saved
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:40:57.017, closeTime=2017-11-23T15:40:57.079} is closed ad it can't be updated
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:40:57.095, closeTime=null} saved
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:40:57.095, closeTime=null} saved
+Bill Bill{billId=3, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:40:57.111, closeTime=null} saved
+Bill Bill{billId=4, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:40:57.111, closeTime=null} saved
+Bill Bill{billId=5, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:40:57.126, closeTime=null} saved
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:40:57.126, closeTime=null} saved
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:40:57.126, closeTime=null} saved
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:40:57.126, closeTime=null} removed
+Salesman was created: FullName 1 login 1 and password 1, result false
+Salesman try connect with login 1 and password 1,result true
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:40:57.158, closeTime=null} saved
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:40:57.158, closeTime=null} saved
+Bill null wasn't saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:40:57.173, closeTime=null} saved
+Salesman was created: FullName 1 login 1 and password 1, result true
+Salesman was created: FullName 2 login 2 and password 2, result true
+Salesman try connect with login asd and password asd,result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:41:17.496, closeTime=null} saved
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:41:17.496, closeTime=2017-11-23T15:41:17.543} is closed ad it can't be updated
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:41:17.559, closeTime=null} saved
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:41:17.559, closeTime=null} saved
+Bill Bill{billId=3, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:41:17.559, closeTime=null} saved
+Bill Bill{billId=4, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:41:17.574, closeTime=null} saved
+Bill Bill{billId=5, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:41:17.574, closeTime=null} saved
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:41:17.574, closeTime=null} saved
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:41:17.574, closeTime=null} saved
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:41:17.574, closeTime=null} removed
+Salesman was created: FullName 1 login 1 and password 1, result false
+Salesman try connect with login 1 and password 1,result true
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:41:17.606, closeTime=null} saved
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:41:17.606, closeTime=null} saved
+Bill null wasn't saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-11-23T15:41:17.621, closeTime=null} saved

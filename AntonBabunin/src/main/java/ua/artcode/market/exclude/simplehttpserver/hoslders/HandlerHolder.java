@@ -34,8 +34,8 @@ public class HandlerHolder implements HttpHandler {
         String request = httpExchange.getRequestURI().toString();
         if ("/".equals(request) &&
                 httpExchange.getRequestMethod().equals("GET")) {
-            File file = new File("\\Projects\\Java\\Gesserok\\aco22\\" +
-                    "AntonBabunin\\html\\index.html");
+            File file = new File(
+                    "\\Projects\\Java\\Gesserok\\market\\index.html");
             httpExchange.sendResponseHeaders(200, 0);
             OutputStream os = httpExchange.getResponseBody();
             FileInputStream fis = new FileInputStream(file);
@@ -49,11 +49,15 @@ public class HandlerHolder implements HttpHandler {
         }
     }
 
-    public static Employee token(HttpExchange httpExchange) throws LoginOrPasswordNotFoundException, LoginOrPasswordArgumentExeption {
-        if (!httpExchange.getRequestHeaders().containsKey("Token")) throw new LoginOrPasswordNotFoundException();
+    public static Employee token(HttpExchange httpExchange)
+            throws LoginOrPasswordNotFoundException,
+            LoginOrPasswordArgumentExeption {
+        if (!httpExchange.getRequestHeaders().containsKey("Token"))
+            throw new LoginOrPasswordNotFoundException();
         List<String> tokenList = httpExchange.getRequestHeaders().get("Token");
 
-        if (tokenList == null || tokenList.isEmpty()) throw new LoginOrPasswordNotFoundException();
+        if (tokenList == null || tokenList.isEmpty())
+            throw new LoginOrPasswordNotFoundException();
         String userToken = tokenList.get(tokenList.size()-1);
 
         GsonBuilder builder = new GsonBuilder();
