@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.RunTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-11-14T10:50:33" hostname="DESKTOP-OQ9UNTJ" time="0.036">
+  <properties/>
+  <testcase name="testAllFunction" classname="tests.RunTests" time="0.036"/>
+  <system-out><![CDATA[
+b1 = true
+b2 = true
+true
+Terminal{
+ID=2
+countSalesman=1, 
+bills=[Bill{ id=8380,
+ products=[Product: id: 6695 name: PYAKSNHATLVCVGZYGHKJEQQYVMVATZ price: 352,16 
+, Product: id: 19024 name: WWZAXVJDOAJPLTIAFDDSZELDJXBHEE price: 99,76 
+, Product: id: 3471 name: IXJNNKGKGQKAOMOYGCZXZSEZRZIVEU price: 593,63 
+, Product: id: 6695 name: PYAKSNHATLVCVGZYGHKJEQQYVMVATZ price: 352,16 
+, Product: id: 19024 name: WWZAXVJDOAJPLTIAFDDSZELDJXBHEE price: 99,76 
+, Product: id: 3471 name: IXJNNKGKGQKAOMOYGCZXZSEZRZIVEU price: 593,63 
+, Product: id: 3471 name: IXJNNKGKGQKAOMOYGCZXZSEZRZIVEU price: 593,63 
+, Product: id: 9097 name: IFXVJHHKAAZUKBBSQLWMFMIJBFUATL price: 935,97 
+, Product: id: 35100 name: FFRLWMBWEKZTTHHVJAJIXQHPXIFFDH price: 668,31 
+, Product: id: 43818 name: FIPBQLDAFDKHDDMITBSAZLQZPQZJIU price: 381,98 
+, null, null, null, null, null, null, null, null, null, null], salesman=Salesman{fullName='Ninepkxxbhwtcbrim'}, amountPrice=4670.99, closeTime='14.11.2017 at 12:50:33'}, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null], 
+sales=[Salesman{fullName='Ninepkxxbhwtcbrim'}, Salesman{fullName='Pwbfdtmoyigckbjsslosqt'}, Salesman{fullName='Ooqlfnpkgglcqsqpdkxnwedpqpdlnnneeqmrb'}, Salesman{fullName='Fxvuaj'}, Salesman{fullName='Qhemijemdxdhuaujlqrwabyqgppbstoetqjyunbifwxqst'}, Salesman{fullName='Aaijsisqrahrxvutjomcrkdlcvaacljxfytrqk'}, Salesman{fullName='Lpyvjhpeqdevilchvaymxhjwjsgaxdthvqampnoowmvqbqn'}, Salesman{fullName='Drioedrtlhqkfxlbfhymirgyoppu'}, Salesman{fullName='Uvoxd'}, Salesman{fullName='Bxxkbbbkbiamvmwwdwtxrdmgckefvjcxojrh'}, Salesman{fullName='Ycmqpwc'}, Salesman{fullName='Osivrgfrnlgvppcbwnqhpbmpsiqnxal'}, Salesman{fullName='Xwwkeweyjnllsrkxhkrcqyulmnfwbpslfxe'}, Salesman{fullName='Vwkmpdphaaiikqlqvfdhgsnkkqdwljutacxbkyhck'}, Salesman{fullName='Tplppydjvdislbuclpcpuddoipemabyjseckeagxyjaccbqi'}, Salesman{fullName='Ytefevnlvvbtsmynfnspwkxcopawfebapx'}, Salesman{fullName='Ubhe'}, Salesman{fullName='Uovpw'}, Salesman{fullName='Jhaxbmvwmvgowxmgcccvjmtievanulo'}, Salesman{fullName='Ywx'}]}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Bill.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">AntonBabunin</a> &gt; <a href="index.source.html" class="el_package">ua.artcode.market.models</a> &gt; <span class="el_source">Bill.java</span></div><h1>Bill.java</h1><pre class="source lang-java linenums">package ua.artcode.market.models;
+
+import java.time.LocalDateTime;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Bill implements Comparable&lt;Bill&gt; {
+
+<span class="fc" id="L10">    public static BillComparator billComparator = new BillComparator();</span>
+
+    private int id;
+//    private int terminalId;
+    private Map&lt;Product, Integer&gt; productsMap;
+    private Salesman salesman;
+    private double amountPrice;
+
+    private LocalDateTime openTime;
+    private LocalDateTime closeTime;
+
+<span class="fc" id="L21">    public Bill() {</span>
+<span class="fc" id="L22">        this.productsMap = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L23">        this.openTime = LocalDateTime.now();</span>
+<span class="fc" id="L24">    }</span>
+
+    public int getId() {
+<span class="fc" id="L27">        return id;</span>
+    }
+
+    public void setId(int id) {
+<span class="fc" id="L31">        this.id = id;</span>
+<span class="fc" id="L32">    }</span>
+
+//    public int getTerminalId() {
+//        return terminalId;
+//    }
+//
+//    public void setTerminalId(int terminalId) {
+//        this.terminalId = terminalId;
+//    }
+
+    public Map&lt;Product, Integer&gt; getProductsMap() {
+<span class="fc" id="L43">        return productsMap;</span>
+    }
+
+//    public void setProductsMap(Map&lt;Product, Integer&gt; productsMap) {
+//        this.productsMap = productsMap;
+//    }
+
+    public Salesman getSalesman() {
+<span class="fc" id="L51">        return salesman;</span>
+    }
+
+    public void setSalesman(Salesman salesman) {
+<span class="fc" id="L55">        this.salesman = salesman;</span>
+<span class="fc" id="L56">    }</span>
+
+    public double getAmountPrice() {
+<span class="fc" id="L59">        return amountPrice;</span>
+    }
+
+    public void setAmountPrice(double amountPrice) {
+<span class="fc" id="L63">        this.amountPrice = amountPrice;</span>
+<span class="fc" id="L64">    }</span>
+
+    public LocalDateTime getOpenTime() {
+<span class="fc" id="L67">        return openTime;</span>
+    }
+
+    public void setOpenTime(LocalDateTime openTime) {
+<span class="fc" id="L71">        this.openTime = openTime;</span>
+<span class="fc" id="L72">    }</span>
+
+    public LocalDateTime getCloseTime() {
+<span class="fc" id="L75">        return closeTime;</span>
+    }
+
+    public void setCloseTime(LocalDateTime closeTime) {
+<span class="fc" id="L79">        this.closeTime = closeTime;</span>
+<span class="fc" id="L80">    }</span>
+
+    @Override
+    public boolean equals(Object object) {
+<span class="fc bfc" id="L84" title="All 2 branches covered.">        if (this == object) return true;</span>
+<span class="pc bpc" id="L85" title="2 of 4 branches missed.">        if (object == null || getClass() != object.getClass()) return false;</span>
+
+<span class="fc" id="L87">        Bill bill = (Bill) object;</span>
+
+<span class="pc bpc" id="L89" title="1 of 2 branches missed.">        return id == bill.id;</span>
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+<span class="nc" id="L96">        result = id;</span>
+<span class="nc bnc" id="L97" title="All 2 branches missed.">        result = 31 * result + (productsMap != null ? productsMap.hashCode() : 0);</span>
+<span class="nc bnc" id="L98" title="All 2 branches missed.">        result = 31 * result + (salesman != null ? salesman.hashCode() : 0);</span>
+<span class="nc" id="L99">        temp = Double.doubleToLongBits(amountPrice);</span>
+<span class="nc" id="L100">        result = 31 * result + (int) (temp ^ (temp &gt;&gt;&gt; 32));</span>
+<span class="nc bnc" id="L101" title="All 2 branches missed.">        result = 31 * result + (openTime != null ? openTime.hashCode() : 0);</span>
+<span class="nc bnc" id="L102" title="All 2 branches missed.">        result = 31 * result + (closeTime != null ? closeTime.hashCode() : 0);</span>
+<span class="nc" id="L103">        return result;</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="fc" id="L108">        return &quot;Bill{&quot; +</span>
+                &quot;billId=&quot; + id +
+//                &quot;, terminalId=&quot; + terminalId +
+                &quot;, productsMap=&quot; + productsMap +
+                &quot;, salesman=&quot; + salesman +
+                &quot;, amountPrice=&quot; + amountPrice +
+                &quot;, openTime=&quot; + openTime +
+                &quot;, closeTime=&quot; + closeTime +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Bill o) {
+<span class="nc bnc" id="L121" title="All 2 branches missed.">        if (o == null) return 1;</span>
+<span class="nc bnc" id="L122" title="All 2 branches missed.">        if (((o.getAmountPrice()-this.getAmountPrice()) * 100) &gt; 0) return -1;</span>
+<span class="nc bnc" id="L123" title="All 2 branches missed.">        else if (((o.getAmountPrice()-this.getAmountPrice()) * 100) == 0)</span>
+<span class="nc" id="L124">            return 0;</span>
+<span class="nc" id="L125">        else return 1;</span>
+    }
+//
+//    @Override
+//    public int compare(Bill o1, Bill o2) {
+//        return (int)((o1.getAmountPrice() - o2.getAmountPrice())*100);
+//    }
+//
+//    @Override
+//    public Comparator&lt;Bill&gt; thenComparing(Comparator&lt;? super Bill&gt; other) {
+//        return new Comparator&lt;Bill&gt;() {
+//            @Override
+//            public int compare(Bill o1, Bill o2) {
+//                return o1.getCloseTime().compareTo(o2.getCloseTime());
+//            }
+//        };
+//    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.8.201612092310</span></div></body></html>

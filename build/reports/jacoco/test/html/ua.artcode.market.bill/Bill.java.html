@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Bill.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">AntonBabunin</a> &gt; <a href="index.source.html" class="el_package">ua.artcode.market.bill</a> &gt; <span class="el_source">Bill.java</span></div><h1>Bill.java</h1><pre class="source lang-java linenums">package ua.artcode.market.bill;
+
+import ua.artcode.market.product.Product;
+import ua.artcode.market.salesman.Salesman;
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Date;
+
+public class Bill {
+
+    private static final int DEFAULT_SIZE = 20;
+
+    private int id;
+    private Product[] products;
+    private Salesman salesman;
+    private double amountPrice;
+    private String closeTime;
+
+    private boolean isClosed;
+    private int firstFree;
+    private int lastFree;
+
+
+/*     This constructor use in app
+    public Bill(int id, Product[] products, Salesman salesman,
+            double amountPrice, String closeTime, boolean isClosed,
+            int firstFree,
+            int lastFree, int addedProduct) {
+        BillCreator.createBill(salesman);
+    }
+*/
+
+    //    This constructor created for test, isn't used in app
+<span class="fc" id="L34">    public Bill(int id, Salesman salesman) {</span>
+<span class="fc" id="L35">        this.id = id;</span>
+<span class="fc" id="L36">        this.salesman = salesman;</span>
+<span class="fc" id="L37">        this.products = new Product[DEFAULT_SIZE];</span>
+<span class="fc" id="L38">        this.amountPrice = 0.0;</span>
+<span class="fc" id="L39">        this.closeTime = &quot;&quot;;</span>
+<span class="fc" id="L40">        this.isClosed = false;</span>
+<span class="fc" id="L41">        this.firstFree = 0;</span>
+<span class="fc" id="L42">        this.lastFree = 1;</span>
+<span class="fc" id="L43">    }</span>
+
+    public Bill(int id, Product[] products, Salesman salesman,
+                double amountPrice, String closeTime,
+                boolean isClosed, int firstFree,
+<span class="fc" id="L48">                int lastFree) {</span>
+
+<span class="fc" id="L50">        this.id = id;</span>
+<span class="fc" id="L51">        this.products = products;</span>
+<span class="fc" id="L52">        this.salesman = salesman;</span>
+<span class="fc" id="L53">        this.amountPrice = amountPrice;</span>
+<span class="fc" id="L54">        this.closeTime = closeTime;</span>
+<span class="fc" id="L55">        this.isClosed = isClosed;</span>
+<span class="fc" id="L56">        this.firstFree = firstFree;</span>
+<span class="fc" id="L57">        this.lastFree = lastFree;</span>
+<span class="fc" id="L58">    }</span>
+
+    public boolean addProduct(Product product) {
+<span class="pc bpc" id="L61" title="1 of 2 branches missed.">        if (!this.isClosed()) {</span>
+<span class="pc bpc" id="L62" title="2 of 4 branches missed.">            if (product != null &amp;&amp; product.getName() != null) {</span>
+<span class="fc" id="L63">                addProductlogic(product);</span>
+            }
+<span class="fc" id="L65">            return true;</span>
+        }
+<span class="nc" id="L67">        return false;</span>
+    }
+
+    private boolean addProductlogic(Product product) {
+<span class="pc bpc" id="L71" title="1 of 2 branches missed.">        if (this.getProducts() == null) {</span>
+<span class="nc" id="L72">            setProducts();</span>
+        }
+<span class="fc" id="L74">        this.getProducts()[this.firstFree] = product;</span>
+<span class="fc" id="L75">        this.firstFree = this.lastFree;</span>
+<span class="pc bpc" id="L76" title="1 of 2 branches missed.">        for (int i = firstFree; i &lt; this.getProducts().length;</span>
+<span class="nc" id="L77">             i++) {</span>
+<span class="pc bpc" id="L78" title="1 of 2 branches missed.">            if (this.getProducts()[i] == null) {</span>
+<span class="fc" id="L79">                this.lastFree = ++i;</span>
+<span class="fc" id="L80">                return true;</span>
+            }
+        }
+<span class="nc" id="L83">        return false;</span>
+    }
+    private void setProducts() {
+<span class="nc" id="L86">        this.products = new Product[DEFAULT_SIZE];</span>
+<span class="nc" id="L87">        this.firstFree = 0;</span>
+<span class="nc" id="L88">        this.lastFree = 1;</span>
+<span class="nc" id="L89">    }</span>
+
+    public double closeBill() { //It can be void, but for test it set as double;
+<span class="fc" id="L92">        SimpleDateFormat dF =</span>
+                new SimpleDateFormat(&quot;dd.MM.yyyy 'at' HH:mm:ss&quot;);
+<span class="fc" id="L94">        this.setCloseTime(dF.format(new Date()));</span>
+<span class="fc" id="L95">        this.setIsClosed();</span>
+<span class="fc" id="L96">        return this.calculateAmountPrice();</span>
+    }
+
+    private void setIsClosed() {
+<span class="fc" id="L100">        this.isClosed = true;</span>
+<span class="fc" id="L101">    }</span>
+
+    public boolean isClosed() {
+<span class="fc" id="L104">        return this.isClosed;</span>
+    }
+
+    private double calculateAmountPrice() {
+<span class="fc" id="L108">        double amountPrice = 0.0;</span>
+<span class="pc bpc" id="L109" title="1 of 2 branches missed.">        if (this.getProducts() != null) {</span>
+<span class="fc bfc" id="L110" title="All 2 branches covered.">            for (Product product : this.getProducts()) {</span>
+<span class="fc bfc" id="L111" title="All 2 branches covered.">                if (product != null) {</span>
+<span class="fc" id="L112">                    amountPrice += product.getPrice();</span>
+                }
+            }
+        }
+<span class="fc" id="L116">        return amountPrice;</span>
+    }
+
+    public boolean printBill() {
+<span class="nc" id="L120">        System.out.printf(&quot;Bill: \n ID: %d \n&quot;, this.getId());</span>
+<span class="nc bnc" id="L121" title="All 2 branches missed.">        for (Product product : this.getProducts()) {</span>
+<span class="nc bnc" id="L122" title="All 2 branches missed.">            if (product != null) {</span>
+<span class="nc" id="L123">                product.toString();</span>
+            }
+        }
+<span class="nc" id="L126">        System.out.printf(&quot;AmountPrice: %.2f \n&quot;, this.getAmountPrice());</span>
+<span class="nc" id="L127">        System.out.printf(&quot;CloseTime: %s \n&quot;, this.getCloseTime());</span>
+<span class="nc" id="L128">        System.out.printf(&quot;You were serviced by %s \n&quot;, salesman.getFullName());</span>
+<span class="nc" id="L129">        return true;</span>
+    }
+
+    public int getId() {
+<span class="fc" id="L133">        return id;</span>
+    }
+
+    public Product[] getProducts() {
+<span class="fc" id="L137">        return products;</span>
+    }
+
+//    public void setProducts(Product[] products) {
+//        this.products = products;
+//    }
+
+    public Salesman getSalesman() {
+<span class="fc" id="L145">        return salesman;</span>
+    }
+
+//    public void setSalesman(Salesman salesman) {
+//        this.salesman = salesman;
+//    }
+
+    private double getAmountPrice() {
+<span class="nc" id="L153">        return amountPrice;</span>
+    }
+
+    public void setAmountPrice(double amountPrice) {
+<span class="fc" id="L157">        this.amountPrice = amountPrice;</span>
+<span class="fc" id="L158">    }</span>
+
+    private String getCloseTime() {
+<span class="fc" id="L161">        return this.closeTime;</span>
+    }
+
+    private void setCloseTime(String closeTime) {
+<span class="fc" id="L165">        this.closeTime = closeTime;</span>
+<span class="fc" id="L166">    }</span>
+
+    @Override
+    public boolean equals(Object object) {
+<span class="pc bpc" id="L170" title="2 of 4 branches missed.">        return object != null &amp;&amp; object instanceof Bill &amp;&amp;</span>
+<span class="fc bfc" id="L171" title="All 2 branches covered.">                ((Bill) object).getId() == this.id &amp;&amp;</span>
+<span class="pc bpc" id="L172" title="1 of 2 branches missed.">                (Arrays.deepEquals(((Bill) object).getProducts(),</span>
+<span class="fc" id="L173">                (this.getProducts())) &amp;&amp;</span>
+<span class="pc bpc" id="L174" title="1 of 2 branches missed.">                ((Bill) object).getCloseTime().equals(this.getCloseTime()) &amp;&amp;</span>
+<span class="pc bpc" id="L175" title="1 of 2 branches missed.">                ((Bill) object).getSalesman().equals(this.getSalesman()));</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="fc" id="L180">        return &quot;Bill{ id=&quot; + id +</span>
+<span class="fc" id="L181">                &quot;,\n products=&quot; + Arrays.toString(products) +</span>
+                &quot;, salesman=&quot; + salesman +
+                &quot;, amountPrice=&quot; + amountPrice +
+                &quot;, closeTime='&quot; + closeTime + '\'' +
+                '}';
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.8.201612092310</span></div></body></html>

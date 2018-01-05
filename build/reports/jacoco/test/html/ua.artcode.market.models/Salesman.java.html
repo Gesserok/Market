@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Salesman.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">AntonBabunin</a> &gt; <a href="index.source.html" class="el_package">ua.artcode.market.models</a> &gt; <span class="el_source">Salesman.java</span></div><h1>Salesman.java</h1><pre class="source lang-java linenums">package ua.artcode.market.models;
+
+import java.util.Comparator;
+
+public class Salesman implements Comparable&lt;Salesman&gt; {
+
+    private String fullName;
+    private String login;
+    private String password;
+    private boolean isConnected;
+
+<span class="nc" id="L12">    public Salesman() {</span>
+<span class="nc" id="L13">    }</span>
+
+<span class="fc" id="L15">    public Salesman(String fullName, String login, String password) {</span>
+<span class="fc" id="L16">        this.fullName = fullName;</span>
+<span class="fc" id="L17">        this.login = login;</span>
+<span class="fc" id="L18">        this.password = password;</span>
+<span class="fc" id="L19">    }</span>
+
+    public String getFullName() {
+<span class="fc" id="L22">        return fullName;</span>
+    }
+
+    public void setFullName(String fullName) {
+<span class="fc" id="L26">        this.fullName = fullName;</span>
+<span class="fc" id="L27">    }</span>
+
+    public String getLogin() {
+<span class="fc" id="L30">        return login;</span>
+    }
+
+    public void setLogin(String login) {
+<span class="fc" id="L34">        this.login = login;</span>
+<span class="fc" id="L35">    }</span>
+
+    public String getPassword() {
+<span class="fc" id="L38">        return password;</span>
+    }
+
+    public void setPassword(String password) {
+<span class="fc" id="L42">        this.password = password;</span>
+<span class="fc" id="L43">    }</span>
+
+    public boolean isConnected() {
+<span class="nc" id="L46">        return isConnected;</span>
+    }
+
+    public void setIsConnected(boolean isConnected) {
+<span class="fc" id="L50">        this.isConnected = isConnected;</span>
+<span class="fc" id="L51">    }</span>
+
+    @Override
+    public boolean equals(Object object) {
+<span class="fc bfc" id="L55" title="All 2 branches covered.">        if (this == object) return true;</span>
+<span class="pc bpc" id="L56" title="2 of 4 branches missed.">        if (object == null || getClass() != object.getClass()) return false;</span>
+
+<span class="fc" id="L58">        Salesman salesman = (Salesman) object;</span>
+
+<span class="pc bpc" id="L60" title="3 of 4 branches missed.">        return login != null ? login.equals(salesman.login) :</span>
+                salesman.login == null;
+    }
+
+//    @Override
+//    public int compare(Salesman o1, Salesman o2) {
+//        return o1.getFullName().compareTo(o2.getFullName());
+//    }
+//
+//    @Override
+//    public Comparator&lt;Salesman&gt; thenComparing(Comparator&lt;? super Salesman&gt; other) {
+//        return new Comparator&lt;Salesman&gt;() {
+//            @Override
+//            public int compare(Salesman o1, Salesman o2) {
+//                return o1.getLogin().compareTo(o2.getLogin());
+//            }
+//        };
+//    }
+
+    @Override
+    public int hashCode() {
+<span class="nc" id="L81">        return 0;</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="fc" id="L86">        return &quot;Salesman{&quot; +</span>
+                &quot;fullName='&quot; + fullName + '\'' +
+                &quot;, login='&quot; + login + '\'' +
+                &quot;, password='&quot; + password + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Salesman o) {
+<span class="nc" id="L95">        return this.getLogin().compareTo(o.getLogin());</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.8.201612092310</span></div></body></html>

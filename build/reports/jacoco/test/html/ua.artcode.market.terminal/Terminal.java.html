@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Terminal.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">AntonBabunin</a> &gt; <a href="index.source.html" class="el_package">ua.artcode.market.terminal</a> &gt; <span class="el_source">Terminal.java</span></div><h1>Terminal.java</h1><pre class="source lang-java linenums">package ua.artcode.market.terminal;
+
+
+import ua.artcode.market.myInterfaces.ITerminal;
+import ua.artcode.market.bill.Bill;
+import ua.artcode.market.creator.BillCreator;
+import ua.artcode.market.salesman.Salesman;
+
+import java.util.Arrays;
+
+
+public class Terminal implements ITerminal{
+    private static final int DEFAULT_SIZE = 20;
+
+<span class="fc" id="L15">    private int countSalesman = 0;</span>
+
+    private int id;
+    private Bill[] bills;
+    private Salesman[] sales;
+
+<span class="fc" id="L21">    public Terminal() {</span>
+<span class="fc" id="L22">    }</span>
+
+<span class="fc" id="L24">    public Terminal(int id) {</span>
+<span class="fc" id="L25">        this.id = id;</span>
+<span class="fc" id="L26">    }</span>
+
+<span class="fc" id="L28">    public Terminal(int id, Bill[] bills, Salesman[] sales) {</span>
+<span class="fc" id="L29">        this.id = id;</span>
+<span class="fc" id="L30">        this.bills = bills;</span>
+<span class="fc" id="L31">        this.sales = sales;</span>
+
+<span class="fc" id="L33">    }</span>
+
+    public int getId() {
+<span class="fc" id="L36">        return id;</span>
+    }
+
+    public Bill[] getBills() {
+<span class="fc" id="L40">        return bills;</span>
+    }
+
+    public Salesman[] getSales() {
+<span class="fc" id="L44">        return sales;</span>
+    }
+
+    public void setSales(Salesman[] sales) {
+<span class="fc" id="L48">        this.sales = sales;</span>
+<span class="fc" id="L49">    }</span>
+
+    public void setBills(Bill[] bills) {
+<span class="fc" id="L52">        this.bills = bills;</span>
+<span class="fc" id="L53">    }</span>
+
+    public boolean login(Salesman salesman) {
+<span class="pc bpc" id="L56" title="2 of 4 branches missed.">        if (salesman != null &amp;&amp; this.getSales() == null) {</span>
+<span class="nc" id="L57">            this.sales = new Salesman[DEFAULT_SIZE];</span>
+<span class="nc" id="L58">            this.sales[countSalesman] = salesman;</span>
+<span class="nc" id="L59">            return true;</span>
+        }
+
+<span class="fc" id="L62">        boolean isAtSales = false;</span>
+<span class="fc bfc" id="L63" title="All 2 branches covered.">        for (Salesman seller : this.getSales()) {</span>
+<span class="pc bpc" id="L64" title="1 of 2 branches missed.">            if (salesman.equals(seller)){</span>
+<span class="nc" id="L65">                isAtSales = true;</span>
+<span class="nc" id="L66">                break;</span>
+            }
+        }
+<span class="pc bpc" id="L69" title="1 of 2 branches missed.">        if (!isAtSales) {</span>
+<span class="fc" id="L70">            this.sales[countSalesman] = salesman;</span>
+<span class="fc" id="L71">            this.countSalesman++;</span>
+<span class="fc" id="L72">            return true;</span>
+        }
+
+<span class="nc" id="L75">        return true;</span>
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+<span class="pc bpc" id="L80" title="2 of 4 branches missed.">        if (obj == null || !(obj instanceof Terminal)) return false;</span>
+<span class="pc bpc" id="L81" title="1 of 2 branches missed.">        if (this.getSales().length != ((Terminal)obj).getSales().length)</span>
+<span class="nc" id="L82">            return  false;</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">        if (this.getBills().length != ((Terminal)obj).getBills().length)</span>
+<span class="fc" id="L84">            return  false;</span>
+<span class="fc bfc" id="L85" title="All 2 branches covered.">        for (int i = 0; i &lt; ((Terminal)obj).getSales().length; i++) {</span>
+<span class="pc bpc" id="L86" title="1 of 2 branches missed.">            if (((Terminal)obj).getSales()[i] != null &amp;&amp;</span>
+<span class="nc bnc" id="L87" title="All 2 branches missed.">                    !((Terminal)obj).getSales()[i].equals(this.getSales()[i]))</span>
+<span class="nc" id="L88">                return false;</span>
+        }
+<span class="fc bfc" id="L90" title="All 2 branches covered.">        for (int i = 0; i &lt; ((Terminal)obj).getBills().length; i++) {</span>
+<span class="pc bpc" id="L91" title="1 of 2 branches missed.">            if (((Terminal)obj).getBills()[i] != null &amp;&amp;</span>
+<span class="nc bnc" id="L92" title="All 2 branches missed.">                    !((Terminal)obj).getBills()[i].equals(this.getBills()[i]))</span>
+<span class="nc" id="L93">                return false;</span>
+        }
+
+<span class="fc" id="L96">        return true;</span>
+    }
+
+    @Override
+    public Bill createBill(Object object/*Salesman salesman*/) {
+<span class="pc bpc" id="L101" title="2 of 4 branches missed.">        if (object != null &amp;&amp; object instanceof Salesman) {</span>
+
+<span class="pc bpc" id="L103" title="1 of 2 branches missed.">            if (findOpenedBill() == null) {</span>
+<span class="fc" id="L104">                Bill bill = BillCreator.createBill(((Salesman) (object)));</span>
+<span class="fc" id="L105">                bills[freeIndexBills()] = bill;</span>
+<span class="fc" id="L106">                return bill;</span>
+            }
+<span class="nc bnc" id="L108" title="All 2 branches missed.">            if (object.equals(findOpenedBill().getSalesman())) {</span>
+<span class="nc" id="L109">                return findOpenedBill();</span>
+            }
+<span class="nc" id="L111">            System.out.println(&quot;You have to close the previous opened bill &quot; +</span>
+<span class="nc" id="L112">                    &quot;%s\n&quot; + findOpenedBill().toString());</span>
+<span class="nc" id="L113">            return null;</span>
+        }
+<span class="nc" id="L115">        return null;</span>
+    }
+
+    private Bill findOpenedBill () {
+<span class="pc bpc" id="L119" title="1 of 2 branches missed.">        if (this.getBills() != null) {</span>
+<span class="fc bfc" id="L120" title="All 2 branches covered.">            for (Bill bill : this.getBills()) {</span>
+<span class="pc bpc" id="L121" title="1 of 4 branches missed.">                if (bill != null &amp;&amp; !bill.isClosed()) {</span>
+<span class="nc" id="L122">                    return bill;</span>
+                }
+            }
+        }
+<span class="fc" id="L126">        return null;</span>
+    }
+    private int freeIndexBills() {
+<span class="pc bpc" id="L129" title="1 of 2 branches missed.">        if (this.getBills() != null){</span>
+<span class="pc bpc" id="L130" title="1 of 2 branches missed.">            for (int i = 0; i &lt; bills.length; i++) {</span>
+<span class="fc bfc" id="L131" title="All 2 branches covered.">                if (bills[i] == null) return i;</span>
+            }
+        }
+<span class="nc" id="L134">        return 0;</span>
+    }
+
+    public Bill addProduct() {
+<span class="pc bpc" id="L138" title="1 of 2 branches missed.">        if (this.getBills() == null) {</span>
+<span class="nc" id="L139">            bills = new Bill[DEFAULT_SIZE];</span>
+        } else {
+<span class="pc bpc" id="L141" title="1 of 2 branches missed.">            for (Bill bill : getBills()) {</span>
+<span class="pc bpc" id="L142" title="2 of 4 branches missed.">                if (bill != null &amp;&amp; !bill.isClosed()) {</span>
+<span class="fc" id="L143">                    return bill;</span>
+                }
+            }
+        }
+<span class="nc" id="L147">        return null;</span>
+    }
+
+    public boolean closeAndSaveBill (Bill bill) {
+<span class="pc bpc" id="L151" title="1 of 2 branches missed.">        if (bill != null) {</span>
+<span class="pc bpc" id="L152" title="2 of 4 branches missed.">            if (this.bills != null &amp;&amp; !bill.isClosed()) {</span>
+<span class="fc" id="L153">                double amountPrice = bill.closeBill();</span>
+<span class="fc" id="L154">                bill.setAmountPrice(amountPrice);</span>
+<span class="fc" id="L155">                bill.toString();</span>
+<span class="fc" id="L156">                return true;</span>
+<span class="nc" id="L157">            } return false;</span>
+<span class="nc" id="L158">        } return false;</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="fc" id="L163">        return &quot;Terminal{&quot; +</span>
+<span class="fc" id="L164">                &quot;\nID=&quot; + getId() +</span>
+                &quot;\ncountSalesman=&quot; + countSalesman +
+<span class="fc" id="L166">                &quot;, \nbills=&quot; + Arrays.toString(bills) +</span>
+<span class="fc" id="L167">                &quot;, \nsales=&quot; + Arrays.toString(sales) +</span>
+                '}';
+    }
+
+// ________________________________________________________________
+
+
+
+
+
+//_________________
+
+    /*
+    private Bill getBillBySalesman(Salesman salesman) {
+        if (salesman != null) {
+            for (Bill bill : this.getBills()) {
+                if (bill.getSalesman().equals(salesman) &amp;&amp; !bill.isClosed()) {
+                    return bill;
+                }
+            }
+        } return null;
+    }
+
+
+    private void printBill(Bill bill) {
+        bill.printBill();
+    }
+
+
+    public Bill findBillById(int id) {
+        if (id &gt; 0) {
+            if (this.getBills() != null) {
+                for (Bill bill :this. getBills()) {
+                    if (id == bill.getId()) {
+                        return bill;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    public Salesman findSalesmanByLoginOrFullname (String nameOrLogin) {
+        if (nameOrLogin != null &amp;&amp; this.getSales() != null) {
+            for (Salesman salesman : this.getSales()) {
+                if (nameOrLogin.equals(salesman.getFullName()) ||
+                        nameOrLogin.equals(salesman.getLogin())) {
+                    return salesman;
+                }
+            }
+        }
+        return null;
+    }
+
+    public Salesman getTopNofSalesMan () {
+        int[] arrProductSales = new int[DEFAULT_SIZE];
+        for (int i = 0; i &lt; this.getSales().length; i++) {
+            int countProduct = 0;
+            for (Bill bill : this.getBills()) {
+                if (this.getSales()[i] != null &amp;&amp; bill != null &amp;&amp;
+                        bill.getSalesman() == this.getSales()[i]) {
+                    countProduct++;
+                }
+                arrProductSales[i] = countProduct;
+            }
+        }
+        return this.getSales()[maxIndex(arrProductSales)];
+    }
+
+    private int maxIndex(int[] arr) {
+        int ind = 0;
+        if (arr != null) {
+            int max = arr[0];
+            for (int i = 0; i &lt; arr.length; i++) {
+                if (arr[i] &gt; max) {
+                    max = arr[i];
+                    ind = i;
+                }
+            }
+        }
+        return ind;
+    }
+
+   public Salesman getTopNofSalesMan () {
+        Salesman bestSeller = null;
+        if (this.getSales() != null) {
+
+            int[] countSales = new int[getSales().length];
+            for (int i = 0; i &lt; this.getSales().length; i++) {
+                int count = 0;
+                for (Bill bill : this.getBills()) {
+                    if (bill != null &amp;&amp; this.getSales()[i] != null &amp;&amp;
+                    this.getSales()[i].equals(bill.getSalesman())) {
+                        count++;
+                    }
+                }
+                countSales[i] = count;
+            }
+             bestSeller = this.getSales()[maxIndex(countSales)];
+        }
+        return bestSeller;
+
+    public void doSomeStatisticStuff () {
+
+    }
+
+    private double getMaxAmountPrice () {
+        double max = 0.0;
+        if (getBills() != null &amp;&amp; this.getBills().length &gt; 0) {
+            for (Bill bill : this.getBills()) {
+                if (bill.getAmountPrice() &gt; max)
+                    max = bill.getAmountPrice();
+            }
+        }
+        return max;
+    }
+
+    private double getMinAmountPrice () {
+        double min = 0.0;
+        if (getBills() != null &amp;&amp; this.getBills().length &gt; 0) {
+            min = this.getBills()[0].getAmountPrice();
+            for (Bill bill : this.getBills()) {
+                if (bill.getAmountPrice() &lt; min)
+                    min = bill.getAmountPrice();
+            }
+        }
+        return min;
+    }
+
+    private double getAverageAmountPrice () {
+        double average = 0.0;
+        if (getBills() != null &amp;&amp; this.getBills().length &gt; 0) {
+            for (Bill bill : this.getBills()) {
+                average += bill.getAmountPrice();
+            }
+        }
+        return average/getBills().length;
+    }
+
+    private int getMaxProduct() {
+        int max = 0;
+        if (this.getBills() != null &amp;&amp; this.getBills().length &gt; 0) {
+            max = ( this.getBills()[0].getProducts() != null) ?
+            this.getBills()[0].getProducts().length : max;
+            for (Bill bill : this.getBills()) {
+                if (bill.getProducts() != null &amp;&amp;
+                bill.getProducts().length &gt; max)
+                    max = bill.getProducts().length;
+            }
+        }
+        return max;
+    }
+
+    private int getMinProduct() {
+        return 0;
+    }
+
+    private int getAverageProduct() {
+        return 0;
+    }
+
+    private int getMaxProductSales() {
+        return 0;
+    }
+
+    private int getMinProductSales() {
+        return 0;
+    }
+
+    private int getAverageProductSales() {
+        return 0;
+    }
+
+    private int getAverageAmountPriceSales() {
+        return 0;
+    }
+
+    private int getMaxAmountPriceSales() {
+        return 0;
+    }
+
+    public void setCountClosedBill(int countClosedBill) {
+    this.countClosedBill = countClosedBill;}*/
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.8.201612092310</span></div></body></html>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ITerminalControllerImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">AntonBabunin</a> &gt; <a href="index.source.html" class="el_package">ua.artcode.market.controllers</a> &gt; <span class="el_source">ITerminalControllerImpl.java</span></div><h1>ITerminalControllerImpl.java</h1><pre class="source lang-java linenums">package ua.artcode.market.controllers;
+
+import ua.artcode.market.interfaces.IAppDb;
+import ua.artcode.market.interfaces.ITerminalController;
+import ua.artcode.market.models.Bill;
+import ua.artcode.market.models.Product;
+import ua.artcode.market.models.Salesman;
+
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Map;
+
+public class ITerminalControllerImpl implements ITerminalController {
+
+//    private static int terminalID = 0;
+    private IAppDb iAppDb;
+
+<span class="fc" id="L19">    public ITerminalControllerImpl(IAppDb iAppDb) {</span>
+<span class="fc" id="L20">        this.iAppDb = iAppDb;</span>
+<span class="fc" id="L21">    }</span>
+
+    public IAppDb getiAppDb() {
+<span class="fc" id="L24">        return iAppDb;</span>
+    }
+
+    @Override
+    public Salesman createSalesman(String fullName, String login,
+                                   String password) throws IOException {
+<span class="fc" id="L30">        return iAppDb.createSalesman(fullName, login, password);</span>
+    }
+
+    @Override
+    public Salesman login(String login, String password) throws IOException {
+<span class="nc" id="L35">        return iAppDb.login(login, password);</span>
+    }
+
+    @Override
+    public Salesman logout(Salesman salesman) throws IOException {
+<span class="nc" id="L40">        return iAppDb.logout(salesman);</span>
+    }
+
+    @Override
+    public Salesman findSalesmanByLogin(String login) {
+<span class="nc" id="L45">        return iAppDb.findSalesmanByLogin(login);</span>
+    }
+
+    @Override
+    public Bill createBill() throws IOException {
+<span class="fc" id="L50">        Bill bill = new Bill();</span>
+<span class="fc" id="L51">        bill.setOpenTime(LocalDateTime.now());</span>
+<span class="fc" id="L52">        Bill bill1 = iAppDb.saveBill(bill);</span>
+
+<span class="fc" id="L54">        return bill1;</span>
+    }
+
+    @Override
+    public Bill addProduct(int billId, Product product) throws IOException {
+<span class="fc" id="L59">        Bill bill = iAppDb.findBillById(billId);</span>
+
+<span class="pc bpc" id="L61" title="1 of 4 branches missed.">        if (bill == null || product == null) return null;</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">        if (!bill.getProductsMap().containsKey(product)) {</span>
+<span class="fc" id="L63">            bill.getProductsMap().put(product, 1);</span>
+<span class="fc" id="L64">            bill.setAmountPrice(calculateAmountPrice(bill));</span>
+<span class="fc" id="L65">            iAppDb.getAllProducts().replace(product,</span>
+<span class="fc" id="L66">                    iAppDb.getAllProducts().get(product) - 1);</span>
+<span class="fc" id="L67">            return bill;</span>
+        }
+
+<span class="fc" id="L70">        bill.getProductsMap().replace(product,</span>
+<span class="fc" id="L71">                bill.getProductsMap().get(product) + 1);</span>
+<span class="fc" id="L72">        bill.setAmountPrice(calculateAmountPrice(bill));</span>
+<span class="fc" id="L73">        iAppDb.getAllProducts().replace(product,</span>
+<span class="fc" id="L74">                iAppDb.getAllProducts().get(product) - 1);</span>
+<span class="fc" id="L75">        iAppDb.update(bill);</span>
+
+<span class="fc" id="L77">        return bill;</span>
+    }
+
+    @Override
+    public List&lt;Bill&gt; getAllBills() {
+<span class="fc" id="L82">        return iAppDb.getBills();</span>
+    }
+
+    @Override
+    public double calculateAmountPrice(Bill bill) {
+
+<span class="fc" id="L88">        double amountPrice = 0.0;</span>
+<span class="pc bpc" id="L89" title="2 of 4 branches missed.">        if (bill == null || bill.getProductsMap() == null ||</span>
+<span class="pc bpc" id="L90" title="1 of 2 branches missed.">                bill.getProductsMap().isEmpty()) return amountPrice;</span>
+        for (Map.Entry&lt;Product, Integer&gt; pair :
+<span class="fc bfc" id="L92" title="All 2 branches covered.">                bill.getProductsMap().entrySet()) {</span>
+<span class="fc" id="L93">            amountPrice += pair.getKey().getPrice() * pair.getValue();</span>
+<span class="fc" id="L94">        }</span>
+<span class="fc" id="L95">        return amountPrice;</span>
+    }
+
+    @Override
+    public String prinBill(Bill bill) {
+<span class="fc" id="L100">        return bill.toString();</span>
+    }
+
+    @Override
+    public Bill closeBill(int id) throws IOException {
+
+<span class="fc" id="L106">        Bill bill = iAppDb.findBillById(id);</span>
+<span class="fc" id="L107">        bill.setCloseTime(LocalDateTime.now());</span>
+<span class="fc" id="L108">        iAppDb.update(bill);</span>
+<span class="fc" id="L109">        return bill;</span>
+    }
+
+
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.8.201612092310</span></div></body></html>

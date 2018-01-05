@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.TestSalesmanController" tests="18" skipped="0" failures="0" errors="0" timestamp="2017-11-17T07:45:57" hostname="DESKTOP-OQ9UNTJ" time="0.024">
+  <properties/>
+  <testcase name="testAddProductNullAll" classname="tests.TestSalesmanController" time="0.003"/>
+  <testcase name="testAddProductNull1" classname="tests.TestSalesmanController" time="0.0"/>
+  <testcase name="testLogin" classname="tests.TestSalesmanController" time="0.001"/>
+  <testcase name="testCreateBill1" classname="tests.TestSalesmanController" time="0.0"/>
+  <testcase name="testCloseAndSafeBill1" classname="tests.TestSalesmanController" time="0.003"/>
+  <testcase name="testFindBillById1" classname="tests.TestSalesmanController" time="0.001"/>
+  <testcase name="testFindBillById2" classname="tests.TestSalesmanController" time="0.0"/>
+  <testcase name="testFindBillById3" classname="tests.TestSalesmanController" time="0.0"/>
+  <testcase name="testAddProductSomePeaces" classname="tests.TestSalesmanController" time="0.0"/>
+  <testcase name="testCreateBillNull1" classname="tests.TestSalesmanController" time="0.0"/>
+  <testcase name="testCreateBillNull2" classname="tests.TestSalesmanController" time="0.001"/>
+  <testcase name="testCreateBillNotNull" classname="tests.TestSalesmanController" time="0.0"/>
+  <testcase name="testCloseAndSafeBill" classname="tests.TestSalesmanController" time="0.001"/>
+  <testcase name="testCreateBill" classname="tests.TestSalesmanController" time="0.0"/>
+  <testcase name="testCreate" classname="tests.TestSalesmanController" time="0.0"/>
+  <testcase name="filterMethodAll" classname="tests.TestSalesmanController" time="0.006"/>
+  <testcase name="testLogin1" classname="tests.TestSalesmanController" time="0.0"/>
+  <testcase name="testLogin2" classname="tests.TestSalesmanController" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

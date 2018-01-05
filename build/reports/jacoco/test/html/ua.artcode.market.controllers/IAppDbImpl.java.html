@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>IAppDbImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">AntonBabunin</a> &gt; <a href="index.source.html" class="el_package">ua.artcode.market.controllers</a> &gt; <span class="el_source">IAppDbImpl.java</span></div><h1>IAppDbImpl.java</h1><pre class="source lang-java linenums">package ua.artcode.market.controllers;
+
+import ua.artcode.market.interfaces.IAppDb;
+import ua.artcode.market.models.Bill;
+import ua.artcode.market.models.Product;
+import ua.artcode.market.models.Salesman;
+import ua.artcode.market.utils.Generator;
+
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.util.*;
+
+public class IAppDbImpl implements IAppDb {
+
+    private int billNextId;
+    private int productNextId;
+
+    private List&lt;Bill&gt; bills;
+    private Map&lt;Product,Integer&gt; products;
+
+
+<span class="fc" id="L22">    public IAppDbImpl() {</span>
+<span class="fc" id="L23">        this.bills = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L24">        this.products = Generator.randomProducts(0);</span>
+<span class="fc" id="L25">    }</span>
+
+    @Override
+    public Map&lt;Product, Integer&gt; getProducts() {
+<span class="nc" id="L29">        return products;</span>
+    }
+
+    @Override
+    public List&lt;Bill&gt; getBills() {
+<span class="fc" id="L34">        return bills;</span>
+    }
+
+    @Override
+    public Map&lt;Product, Integer&gt; getAllProducts() {
+<span class="fc" id="L39">        return products;</span>
+    }
+
+    @Override
+    public Bill findBillById(int id) {
+<span class="pc bpc" id="L44" title="1 of 2 branches missed.">        for (Bill bill : bills) {</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">            if (bill.getId() == id) return bill;</span>
+<span class="fc" id="L46">        }</span>
+<span class="nc" id="L47">        return null;</span>
+    }
+
+    @Override
+    public Product findProductById(int id) {
+<span class="pc bpc" id="L52" title="1 of 2 branches missed.">        for (Product product : products.keySet()) {</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">            if (product.getId() == id) return product;</span>
+<span class="nc" id="L54">        }</span>
+<span class="fc" id="L55">        return null;</span>
+    }
+
+    @Override
+    public Bill removeBill(int id) {
+<span class="fc" id="L60">        Bill bill = findBillById(id);</span>
+
+<span class="pc bpc" id="L62" title="1 of 2 branches missed.">        if (bill == null) return null;</span>
+
+<span class="fc" id="L64">        bills.remove(bill);</span>
+
+<span class="fc" id="L66">        return bill;</span>
+    }
+
+    @Override
+    public Product removeProduct(int id) {
+<span class="nc" id="L71">        Product product = findProductById(id);</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">        if (product != null) {</span>
+<span class="nc" id="L73">            products.replace(product, products.get(product) - 1);</span>
+        }
+<span class="nc" id="L75">        return product;</span>
+    }
+
+    @Override
+    public Bill saveBill(Bill bill) {
+<span class="fc bfc" id="L80" title="All 2 branches covered.">        if (bill != null) {</span>
+<span class="fc" id="L81">            bill.setId(++billNextId);</span>
+<span class="fc" id="L82">            bills.add(bill);</span>
+<span class="fc" id="L83">            return bill;</span>
+<span class="fc" id="L84">        } return null;</span>
+    }
+
+    @Override
+    public Product saveProduct(Product product) {
+<span class="nc" id="L89">        product.setId(++productNextId);</span>
+<span class="nc" id="L90">        products.putIfAbsent(product, 0);</span>
+<span class="nc" id="L91">        return product;</span>
+    }
+
+    @Override
+    public Bill update(Bill bill) {
+<span class="fc" id="L96">        int index = bills.indexOf(bill);</span>
+
+<span class="pc bpc" id="L98" title="1 of 2 branches missed.">        if (index == -1) return null;</span>
+
+<span class="fc" id="L100">        return bills.set(index, bill);</span>
+    }
+
+    @Override
+    public Salesman createSalesman(String fullName, String login,
+                                   String password) throws IOException {
+<span class="nc" id="L106">        return null;</span>
+    }
+
+    @Override
+    public Salesman login(String login, String password) throws IOException {
+<span class="nc" id="L111">        return null;</span>
+    }
+
+    @Override
+    public Salesman logout(Salesman salesman) {
+<span class="nc" id="L116">        return null;</span>
+    }
+
+    @Override
+    public Salesman findSalesmanByLogin(String login) {
+<span class="nc" id="L121">        return null;</span>
+    }
+
+    @Override
+    public List&lt;Bill&gt; filter(Salesman salesman, Product product,
+                            LocalDateTime startDate, LocalDateTime endDate,
+                            Comparator&lt;Bill&gt; billComparator) {
+<span class="pc bpc" id="L128" title="1 of 2 branches missed.">        if (getBills() == null) return null;</span>
+
+<span class="fc" id="L130">        List&lt;Bill&gt; filtered = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L131">        filtered.addAll(getBills());</span>
+
+
+<span class="pc bpc" id="L134" title="1 of 2 branches missed.">        if (salesman != null)</span>
+<span class="fc" id="L135">            filtered = addToListBySeller(filtered, salesman);</span>
+
+<span class="pc bpc" id="L137" title="1 of 2 branches missed.">        if (product != null)</span>
+<span class="fc" id="L138">            filtered = addToListByProduct(filtered, product);</span>
+
+<span class="pc bpc" id="L140" title="1 of 2 branches missed.">        if (startDate != null)</span>
+<span class="nc" id="L141">            filtered = addToListByStartDate(filtered, startDate);</span>
+
+<span class="pc bpc" id="L143" title="1 of 2 branches missed.">        if (endDate != null)</span>
+<span class="nc" id="L144">            filtered = addToListByEndDate(filtered, endDate);</span>
+
+<span class="pc bpc" id="L146" title="1 of 2 branches missed.">        if (billComparator != null) {</span>
+
+<span class="fc" id="L148">            filtered.sort(billComparator.reversed());</span>
+
+        }
+<span class="fc" id="L151">        return filtered;</span>
+    }
+
+    private List&lt;Bill&gt; addToListByProduct (List&lt;Bill&gt; listBills,
+                                           Product product) {
+<span class="fc" id="L156">        List&lt;Bill&gt; list = new ArrayList&lt;&gt;();</span>
+
+<span class="pc bpc" id="L158" title="1 of 2 branches missed.">        if (product == null) return listBills;</span>
+
+<span class="pc bpc" id="L160" title="1 of 2 branches missed.">        if (listBills != null)</span>
+<span class="fc bfc" id="L161" title="All 2 branches covered.">            for (Bill bill : listBills) {</span>
+<span class="pc bpc" id="L162" title="1 of 2 branches missed.">                if ((bill.getProductsMap().containsKey(product))) {</span>
+<span class="fc" id="L163">                    list.add(bill);</span>
+                }
+<span class="fc" id="L165">            }</span>
+<span class="fc" id="L166">        return list;</span>
+    }
+
+    private List&lt;Bill&gt; addToListBySeller (List&lt;Bill&gt; listBills,
+                                          Salesman salesman) {
+<span class="fc" id="L171">        List&lt;Bill&gt; list = new ArrayList&lt;&gt;();</span>
+
+<span class="pc bpc" id="L173" title="1 of 2 branches missed.">        if (salesman == null) return listBills;</span>
+
+<span class="pc bpc" id="L175" title="1 of 2 branches missed.">        if (listBills != null) {</span>
+<span class="fc bfc" id="L176" title="All 2 branches covered.">            for (Bill bill : listBills) {</span>
+<span class="fc bfc" id="L177" title="All 2 branches covered.">                if ((salesman.equals(bill.getSalesman()))) {</span>
+<span class="fc" id="L178">                    list.add(bill);</span>
+                }
+<span class="fc" id="L180">            }</span>
+        }
+<span class="fc" id="L182">        return list;</span>
+    }
+
+    private List&lt;Bill&gt; addToListByStartDate(List&lt;Bill&gt; listBills,
+                                            LocalDateTime date) {
+<span class="nc" id="L187">        List&lt;Bill&gt; list = new ArrayList&lt;&gt;();</span>
+
+<span class="nc bnc" id="L189" title="All 2 branches missed.">        if (date == null) return listBills;</span>
+
+<span class="nc bnc" id="L191" title="All 2 branches missed.">        if (listBills != null) {</span>
+<span class="nc bnc" id="L192" title="All 2 branches missed.">            for (Bill bill : listBills) {</span>
+<span class="nc bnc" id="L193" title="All 2 branches missed.">                if ((date.compareTo(bill.getOpenTime())) &gt;= 0 ) {</span>
+<span class="nc" id="L194">                    list.add(bill);</span>
+                }
+<span class="nc" id="L196">            }</span>
+        }
+<span class="nc" id="L198">        return list;</span>
+    }
+
+    private List&lt;Bill&gt; addToListByEndDate(List&lt;Bill&gt; listBills,
+                                          LocalDateTime date) {
+<span class="nc" id="L203">        List&lt;Bill&gt; list = new ArrayList&lt;&gt;();</span>
+
+<span class="nc bnc" id="L205" title="All 2 branches missed.">        if (date == null) return listBills;</span>
+
+<span class="nc bnc" id="L207" title="All 2 branches missed.">        if (listBills != null ) {</span>
+<span class="nc bnc" id="L208" title="All 2 branches missed.">            for (Bill bill : listBills) {</span>
+<span class="nc bnc" id="L209" title="All 2 branches missed.">                if ((date.compareTo(bill.getCloseTime())) &lt;= 0 ) {</span>
+<span class="nc" id="L210">                    list.add(bill);</span>
+                }
+<span class="nc" id="L212">            }</span>
+        }
+<span class="nc" id="L214">        return list;</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.8.201612092310</span></div></body></html>

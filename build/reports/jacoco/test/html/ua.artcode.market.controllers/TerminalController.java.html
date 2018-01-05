@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TerminalController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">AntonBabunin</a> &gt; <a href="index.source.html" class="el_package">ua.artcode.market.controllers</a> &gt; <span class="el_source">TerminalController.java</span></div><h1>TerminalController.java</h1><pre class="source lang-java linenums">package ua.artcode.market.controllers;
+
+import ua.artcode.market.interfaces.ITerminal;
+import ua.artcode.market.interfaces.SomeStatistics;
+import ua.artcode.market.models.*;
+
+import java.util.*;
+
+
+public class TerminalController implements ITerminal, SomeStatistics{
+
+    private static Map&lt;Salesman, String&gt; salesmanLogin;
+    private static Map&lt;String, String&gt; loginPassword;
+
+    private BillController billController;
+
+<span class="fc" id="L17">    public TerminalController() {</span>
+<span class="fc" id="L18">        this.billController = new BillController();</span>
+<span class="fc" id="L19">    }</span>
+
+
+
+    @Override
+    public Bill createBill(Terminal terminal, Salesman salesman) {
+<span class="pc bpc" id="L25" title="2 of 4 branches missed.">        if (terminal == null || salesman == null) return null;</span>
+
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        if (!terminal.getSales().contains(salesman)) {</span>
+<span class="fc" id="L28">            login(terminal,salesman);</span>
+        }
+<span class="fc" id="L30">        Bill bill = new Bill();</span>
+<span class="fc" id="L31">        bill.setSalesman(salesman);</span>
+<span class="fc" id="L32">        terminal.getSales().add(salesman);</span>
+<span class="fc" id="L33">        terminal.getBills().add(bill);</span>
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">        return this.billController.getBills().add(bill) ? bill : null;</span>
+
+    }
+
+    private void login(Terminal terminal, Salesman salesman) {
+<span class="fc" id="L39">        login(terminal, salesman.getFullName(), salesman.getPassword());</span>
+<span class="fc" id="L40">    }</span>
+
+    @Override
+    public boolean addProduct(Bill bill, Product product) {
+<span class="pc bpc" id="L44" title="2 of 4 branches missed.">        return bill != null &amp;&amp; product != null &amp;&amp;</span>
+<span class="pc bpc" id="L45" title="1 of 2 branches missed.">                this.billController.getBills().contains(bill) &amp;&amp;</span>
+<span class="pc bpc" id="L46" title="1 of 2 branches missed.">                this.billController.addProduct(bill, product);</span>
+
+    }
+
+    @Override
+    public boolean closeAndSafeBill(Bill bill) {
+<span class="pc bpc" id="L52" title="2 of 4 branches missed.">        if (bill != null &amp;&amp; billController.closeBill(bill)) {</span>
+<span class="fc" id="L53">            bill.setAmountPrice(billController.getAmountPrice());</span>
+<span class="fc" id="L54">            billController.printBill(bill);</span>
+<span class="fc" id="L55">            return true;</span>
+        }
+<span class="nc" id="L57">        return false;</span>
+    }
+
+    @Override
+    public Salesman login(Terminal terminal, String login, String pass) {
+<span class="pc bpc" id="L62" title="2 of 6 branches missed.">        if (terminal == null || login == null || pass == null) return null;</span>
+<span class="pc bpc" id="L63" title="1 of 4 branches missed.">        if (salesmanLogin == null || salesmanLogin.isEmpty()) return null;</span>
+
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        for (Map.Entry&lt;String, String&gt; pair : loginPassword.entrySet()) {</span>
+<span class="fc bfc" id="L66" title="All 4 branches covered.">            if (login.equals(pair.getKey()) &amp;&amp; pass.equals(pair.getValue())){</span>
+                for (Map.Entry&lt;Salesman, String&gt; pair1 :
+<span class="pc bpc" id="L68" title="1 of 2 branches missed.">                        salesmanLogin.entrySet()) {</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">                    if (login.equals(pair1.getValue())) {</span>
+<span class="fc" id="L70">                        Salesman salesman = pair1.getKey();</span>
+<span class="fc" id="L71">                        terminal.getSales().add(salesman);</span>
+<span class="fc" id="L72">                        return salesman;</span>
+                    }
+<span class="fc" id="L74">                }</span>
+            }
+<span class="fc" id="L76">        }</span>
+<span class="fc" id="L77">        return null;</span>
+    }
+
+    @Override
+    public List&lt;Bill&gt; getSalesmanBills (Salesman salesman) {
+<span class="nc" id="L82">        ArrayList&lt;Bill&gt; bills = null;</span>
+<span class="nc bnc" id="L83" title="All 2 branches missed.">        if (salesman != null) {</span>
+<span class="nc bnc" id="L84" title="All 2 branches missed.">            for (Bill bill : billController.getBills()) {</span>
+<span class="nc bnc" id="L85" title="All 2 branches missed.">                if (salesman.equals(bill.getSalesman())) {</span>
+<span class="nc bnc" id="L86" title="All 2 branches missed.">                    if (bills == null) {</span>
+<span class="nc" id="L87">                        bills = new ArrayList&lt;Bill&gt;();</span>
+                    }
+<span class="nc" id="L89">                    bills.add(bill);</span>
+                }
+<span class="nc" id="L91">            }</span>
+        }
+<span class="nc" id="L93">        return bills;</span>
+    }
+
+    @Override
+    public Bill findBillById(int id) {
+<span class="fc bfc" id="L98" title="All 2 branches covered.">        for (Bill bill : billController.getBills()) {</span>
+<span class="fc bfc" id="L99" title="All 2 branches covered.">            if (bill.getBillId() == id) {</span>
+<span class="fc" id="L100">                return bill;</span>
+            }
+<span class="fc" id="L102">        }</span>
+<span class="fc" id="L103">        return null;</span>
+    }
+
+    @Override
+    public Salesman create (String fullName, String login, String password) {
+<span class="pc bpc" id="L108" title="2 of 6 branches missed.">        if (fullName == null || login == null || password == null)</span>
+<span class="fc" id="L109">            return null;</span>
+<span class="fc" id="L110">        Salesman seller =</span>
+                new Salesman(fullName, login, password);
+
+<span class="fc bfc" id="L113" title="All 2 branches covered.">        if (salesmanLogin == null) {</span>
+<span class="fc" id="L114">            salesmanLogin = new HashMap&lt;Salesman, String&gt;();</span>
+<span class="fc" id="L115">            loginPassword = new HashMap&lt;String, String&gt;();</span>
+        }
+
+<span class="fc bfc" id="L118" title="All 4 branches covered.">        if (salesmanLogin.isEmpty() || !salesmanLogin.containsValue(login)) {</span>
+<span class="fc" id="L119">            salesmanLogin.put(seller, login);</span>
+<span class="fc" id="L120">            loginPassword.put(login, password);</span>
+<span class="fc" id="L121">            return seller;</span>
+        }
+<span class="pc bpc" id="L123" title="1 of 2 branches missed.">        if (salesmanLogin.containsValue(login)) {</span>
+<span class="fc" id="L124">            return seller;</span>
+        }
+<span class="nc" id="L126">        return null;</span>
+    }
+
+    @Override
+    public Set&lt;Bill&gt; filterMethodAll(Salesman salesman, Product product,
+                                     Date startDate, Date endDate,
+                                     Comparator&lt;Bill&gt; billComparator) {
+
+<span class="fc" id="L134">        Set&lt;Bill&gt; filtered = new HashSet&lt;&gt;();</span>
+<span class="fc" id="L135">        filtered.addAll(billController.getBills());</span>
+
+<span class="pc bpc" id="L137" title="1 of 2 branches missed.">        if  (salesman == null) return filtered;</span>
+        else {
+<span class="fc" id="L139">            filtered = addToListBySeller(filtered, salesman);</span>
+        }
+<span class="pc bpc" id="L141" title="1 of 2 branches missed.">        if  (product == null) return filtered;</span>
+        else {
+<span class="fc" id="L143">            filtered = addToListByProduct(filtered, product);</span>
+        }
+<span class="pc bpc" id="L145" title="1 of 2 branches missed.">        if  (startDate == null) return filtered;</span>
+        else {
+<span class="nc" id="L147">            filtered = addToListByStartDate(filtered, startDate);</span>
+        }
+<span class="nc bnc" id="L149" title="All 2 branches missed.">        if  (endDate == null) return filtered;</span>
+        else {
+<span class="nc" id="L151">            filtered = addToListByEndDate(filtered, endDate);</span>
+        }
+
+<span class="nc" id="L154">        return filtered;</span>
+
+    /*    List&lt;Object&gt; objects = new ArrayList&lt;Object&gt;();
+        objects.add(salesman);
+        objects.add(product);
+        objects.add(startDate);
+        objects.add(endDate);
+        objects.add(billComparator);
+
+        List&lt;Bill&gt; filtered = billController.getBills();
+
+        for (Object obj : objects)
+            if (obj != null) {
+                filtered = filter(filtered, obj, objects.indexOf(obj));
+            }
+        return filtered;*/
+    }
+
+/*    private Set&lt;Bill&gt; filter(Set&lt;Bill&gt; set, Object object, int i) {
+        if (object == null) return set;
+        List&lt;Bill&gt; arrList = new ArrayList&lt;Bill&gt;();
+        if (object instanceof Salesman &amp;&amp; i == 0) {
+            Salesman obj = (Salesman) object;
+            arrList = addToListBySeller(set, obj);
+
+        }
+        if (object instanceof Product &amp;&amp; i == 1) {
+            Product obj = (Product) object;
+            arrList = addToListByProduct(set, obj);
+        }
+        if (object instanceof Date) {
+            Date obj = (Date) object;
+            if (i == 2) {
+                arrList = addToListByStartDate(set, obj);
+            }
+            if (i == 3) {
+                arrList = addToListByEndDate(set, obj);
+            }
+        }
+//        if (object instanceof Comparator) {
+//            Comparator obj = (Comparator) object;
+//            Set&lt;Bill&gt; sorted = sortByComparator(set, obj);
+//            for (Bill sort : sorted) {
+//                arrList.add(sort);
+//            }
+//        }
+        return arrList;
+    }*/
+
+    private Set&lt;Bill&gt; addToListByProduct (Set&lt;Bill&gt; set, Product product) {
+<span class="fc" id="L204">        Set&lt;Bill&gt; setBills = new HashSet&lt;&gt;();</span>
+<span class="pc bpc" id="L205" title="1 of 2 branches missed.">        if (set != null)</span>
+<span class="fc bfc" id="L206" title="All 2 branches covered.">            for (Bill bill : set) {</span>
+<span class="fc bfc" id="L207" title="All 2 branches covered.">                if ((bill.getProducts().containsKey(product))) {</span>
+<span class="fc" id="L208">                    setBills.add(bill);</span>
+                }
+<span class="fc" id="L210">            }</span>
+<span class="fc" id="L211">        return setBills;</span>
+    }
+
+    private Set&lt;Bill&gt; addToListBySeller (Set&lt;Bill&gt; set, Salesman salesman) {
+<span class="fc" id="L215">        Set&lt;Bill&gt; setBills = new HashSet&lt;&gt;();</span>
+<span class="pc bpc" id="L216" title="1 of 2 branches missed.">        if (set != null) {</span>
+<span class="fc bfc" id="L217" title="All 2 branches covered.">            for (Bill bill : set) {</span>
+<span class="fc bfc" id="L218" title="All 2 branches covered.">                if ((salesman.equals(bill.getSalesman()))) {</span>
+<span class="fc" id="L219">                    setBills.add(bill);</span>
+                }
+<span class="fc" id="L221">            }</span>
+        }
+<span class="fc" id="L223">        return setBills;</span>
+    }
+
+    private Set&lt;Bill&gt; addToListByStartDate(Set&lt;Bill&gt; set, Date date) {
+<span class="nc" id="L227">        Set&lt;Bill&gt; setBills = new HashSet&lt;&gt;();</span>
+<span class="nc bnc" id="L228" title="All 2 branches missed.">        if (set != null) {</span>
+<span class="nc bnc" id="L229" title="All 2 branches missed.">            for (Bill bill : set) {</span>
+<span class="nc bnc" id="L230" title="All 2 branches missed.">                if ((date.compareTo(bill.getOpenTime())) &gt;=0 ) {</span>
+<span class="nc" id="L231">                    setBills.add(bill);</span>
+                }
+<span class="nc" id="L233">            }</span>
+        }
+<span class="nc" id="L235">        return setBills;</span>
+    }
+
+    private Set&lt;Bill&gt; addToListByEndDate(Set&lt;Bill&gt; set, Date date) {
+<span class="nc" id="L239">        Set&lt;Bill&gt; setBills = new HashSet&lt;&gt;();</span>
+<span class="nc bnc" id="L240" title="All 2 branches missed.">        if (set != null) {</span>
+<span class="nc bnc" id="L241" title="All 2 branches missed.">            for (Bill bill : set) {</span>
+<span class="nc bnc" id="L242" title="All 2 branches missed.">                if ((date.compareTo(bill.getCloseTime())) &lt; 0 ) {</span>
+<span class="nc" id="L243">                    setBills.add(bill);</span>
+                }
+<span class="nc" id="L245">            }</span>
+        }
+<span class="nc" id="L247">        return setBills;</span>
+    }
+
+//    private Set sortByComparator(List&lt;Bill&gt; list, Comparator&lt;Bill&gt; comp) {
+//        Set treeSet = new TreeSet();
+//        treeSet.addAll(list);
+//        return treeSet;
+//    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.8.201612092310</span></div></body></html>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BillController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">AntonBabunin</a> &gt; <a href="index.source.html" class="el_package">ua.artcode.market.controllers</a> &gt; <span class="el_source">BillController.java</span></div><h1>BillController.java</h1><pre class="source lang-java linenums">package ua.artcode.market.controllers;
+
+import ua.artcode.market.interfaces.IBill;
+import ua.artcode.market.models.Bill;
+import ua.artcode.market.models.Product;
+import ua.artcode.market.utils.Utils;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+public class BillController implements IBill{
+
+    private ArrayList&lt;Bill&gt; bills;
+    private double amountPrice;
+
+<span class="fc" id="L17">    public BillController() {</span>
+<span class="fc" id="L18">        this.bills = new ArrayList&lt;Bill&gt;();</span>
+<span class="fc" id="L19">    }</span>
+
+    public List&lt;Bill&gt; getBills() {
+<span class="fc" id="L22">        return bills;</span>
+    }
+
+    public double getAmountPrice() {
+<span class="fc" id="L26">        return amountPrice;</span>
+    }
+
+    public boolean addProduct(Bill bill, Product product) {
+<span class="pc bpc" id="L30" title="3 of 6 branches missed.">        return bill != null &amp;&amp; product != null &amp;&amp; addProductIs(bill, product);</span>
+    }
+
+    private boolean addProductIs(Bill bill, Product product) {
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">        if (bill.getProducts().containsKey(product)) {</span>
+            for (Map.Entry&lt;Product, Integer&gt; pair :
+<span class="nc bnc" id="L36" title="All 2 branches missed.">                    bill.getProducts().entrySet()) {</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">                if (pair.getKey().equals(product)) {</span>
+<span class="nc" id="L38">                    pair.setValue(pair.getValue() + 1);</span>
+<span class="nc" id="L39">                    return true;</span>
+                }
+<span class="nc" id="L41">            }</span>
+        }
+<span class="fc" id="L43">        bill.getProducts().put(product, 1);</span>
+<span class="fc" id="L44">        return true;</span>
+    }
+
+    public double calculateAmountPrice (Bill bill) {
+<span class="fc" id="L48">        double amountPrice = 0.0;</span>
+<span class="pc bpc" id="L49" title="1 of 4 branches missed.">        if (bill != null &amp;&amp; !bill.getProducts().isEmpty()) {</span>
+            for (Map.Entry&lt;Product, Integer&gt; pair :
+<span class="fc bfc" id="L51" title="All 2 branches covered.">                    bill.getProducts().entrySet()) {</span>
+<span class="fc" id="L52">                amountPrice += pair.getKey().getPrice() * pair.getValue();</span>
+<span class="fc" id="L53">            }</span>
+        }
+<span class="fc" id="L55">        this.amountPrice = amountPrice;</span>
+<span class="fc" id="L56">        return amountPrice;</span>
+    }
+
+    public boolean closeBill(Bill bill) {
+<span class="pc bpc" id="L60" title="1 of 2 branches missed.">        if  (bill != null){</span>
+<span class="fc" id="L61">            bill.setCloseTime(Utils.getCurrentTime());</span>
+<span class="fc" id="L62">            this.amountPrice = calculateAmountPrice (bill);</span>
+<span class="fc" id="L63">            return true;</span>
+        }
+<span class="nc" id="L65">        return false;</span>
+    }
+
+    public String printBill(Bill bill) {
+<span class="fc" id="L69">        String print = &quot;BillController{&quot; +</span>
+<span class="fc" id="L70">                &quot;id=&quot; + bill.getBillId() +</span>
+<span class="fc" id="L71">                &quot;, openTime=&quot; + bill.getOpenTime() +</span>
+<span class="fc" id="L72">                &quot;, terminal id=&quot; + bill.getTerminalId() +</span>
+<span class="fc" id="L73">                &quot;, products=&quot; + bill.getProducts() +</span>
+<span class="fc" id="L74">                &quot;, salerman=&quot; + bill.getSalesman() +</span>
+<span class="fc" id="L75">                &quot;, amountPrice=&quot; + bill.getAmountPrice() +</span>
+<span class="fc" id="L76">                &quot;, closeTime=&quot; + bill.getCloseTime() +</span>
+                '}';
+<span class="fc" id="L78">        return print;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.8.201612092310</span></div></body></html>

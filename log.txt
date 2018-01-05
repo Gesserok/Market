@@ -1,0 +1,370 @@
+Employee was created: FullName 1 login 1 and password 1, result false
+Employee was created: FullName 1123 login 123 and password 1, result false
+Employee was created: FullName 2 login 12 and password 1, result false
+Employee was created: FullName 2 login 13 and password 1, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.840, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=2.0}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.840, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.840, closeTime=null} was updated 
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.858, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=246.0}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.858, closeTime=null} was updated 
+Bill Bill{billId=3, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.865, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=12313.42}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.865, closeTime=null} was updated 
+Bill Bill{billId=4, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.880, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=24626.84}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.880, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.840, closeTime=2017-12-14T16:28:03.880} is closed ad it can't be updated 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.858, closeTime=2017-12-14T16:28:03.897} is closed ad it can't be updated 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.865, closeTime=2017-12-14T16:28:03.902} is closed ad it can't be updated 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=2, AbstractProduct{id=1, name='1', price=6.0}=1}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.880, closeTime=2017-12-14T16:28:03.906} is closed ad it can't be updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=18.0}=3}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.840, closeTime=2017-12-14T16:28:03.880} removed 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.917, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.917, closeTime=2017-12-14T16:28:03.934} is closed ad it can't be updated 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.947, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.947, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.947, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.947, closeTime=null} saved 
+Bill Bill{billId=5, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.963, closeTime=null} saved 
+Employee was created: FullName 1 login 1 and password 1, result false
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.978, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Product AbstractProduct{id=1, name='GONMJPGIUIXRMEFWICRIYJIAEOSYGL', price=71.95} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.994, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='GONMJPGIUIXRMEFWICRIYJIAEOSYGL', price=71.95}=1}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:03.994, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:04.010, closeTime=null} saved 
+Employee was created: FullName 1 login 1 and password 1, result false
+Employee was created: FullName 1123 login 123 and password 1, result false
+Employee was created: FullName 2 login 12 and password 1, result false
+Employee was created: FullName 2 login 13 and password 1, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.804, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=2.0}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.804, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.804, closeTime=null} was updated 
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.823, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=246.0}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.823, closeTime=null} was updated 
+Bill Bill{billId=3, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.835, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=12313.42}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.835, closeTime=null} was updated 
+Bill Bill{billId=4, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.847, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=24626.84}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.847, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.804, closeTime=2017-12-14T16:28:49.856} is closed ad it can't be updated 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.823, closeTime=2017-12-14T16:28:49.860} is closed ad it can't be updated 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.835, closeTime=2017-12-14T16:28:49.865} is closed ad it can't be updated 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=2, AbstractProduct{id=1, name='1', price=6.0}=1}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.847, closeTime=2017-12-14T16:28:49.865} is closed ad it can't be updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=18.0}=3}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.804, closeTime=2017-12-14T16:28:49.856} removed 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.881, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.881, closeTime=2017-12-14T16:28:49.881} is closed ad it can't be updated 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.897, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.931, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.937, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.942, closeTime=null} saved 
+Bill Bill{billId=5, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.947, closeTime=null} saved 
+Employee was created: FullName 1 login 1 and password 1, result false
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.963, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Product AbstractProduct{id=1, name='XFPTWKUSPJJLNKHCPAJQWMPJGGNFUQ', price=768.79} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.978, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='XFPTWKUSPJJLNKHCPAJQWMPJGGNFUQ', price=768.79}=1}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.978, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:28:49.994, closeTime=null} saved 
+Employee was created: FullName 1 login 1 and password 1, result false
+Employee was created: FullName 1 login 1 and password 1, result false
+Employee was created: FullName asdf login 1sdfg and password sdfsas, result false
+Employee was created: FullName 1123 login 123 and password 1, result false
+Employee was created: FullName 2 login 12 and password 1, result false
+Employee was created: FullName 2 login 13 and password 1, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.289, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=2.0}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.289, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.289, closeTime=null} was updated 
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.309, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=246.0}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.309, closeTime=null} was updated 
+Bill Bill{billId=3, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.318, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=12313.42}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.318, closeTime=null} was updated 
+Bill Bill{billId=4, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.327, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=24626.84}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.327, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.289, closeTime=2017-12-14T16:34:30.336} is closed ad it can't be updated 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.309, closeTime=2017-12-14T16:34:30.340} is closed ad it can't be updated 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.318, closeTime=2017-12-14T16:34:30.345} is closed ad it can't be updated 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=2, AbstractProduct{id=1, name='1', price=6.0}=1}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.327, closeTime=2017-12-14T16:34:30.349} is closed ad it can't be updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=18.0}=3}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.289, closeTime=2017-12-14T16:34:30.336} removed 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.381, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.381, closeTime=2017-12-14T16:34:30.381} is closed ad it can't be updated 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.396, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.411, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.411, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.411, closeTime=null} saved 
+Bill Bill{billId=5, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.431, closeTime=null} saved 
+Employee was created: FullName 1 login 1 and password 1, result false
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.447, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Product AbstractProduct{id=1, name='VNNORXEQSQGMFTLUOARXLPWTUYPBIK', price=781.58} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.463, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='VNNORXEQSQGMFTLUOARXLPWTUYPBIK', price=781.58}=1}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.463, closeTime=null} saved 
+Employee was created: FullName ghjj login jhk and password ghk, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:34:30.479, closeTime=null} saved 
+Employee was created: FullName asdf login 1sdfg and password sdfsas, result false
+Employee was created: FullName asdf login 1sdfg and password sdfsas, result false
+Employee was created: FullName asdf login 1sdfg and password sdfsas, result false
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:38:10.792, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:38:10.792, closeTime=2017-12-14T16:38:10.796} is closed ad it can't be updated 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:38:10.806, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:38:10.811, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:38:10.815, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:38:10.819, closeTime=null} saved 
+Bill Bill{billId=5, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:38:10.830, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:38:10.849, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Product AbstractProduct{id=1, name='JTJAMSUELLAEMFVPQDDVPFDQIABFMD', price=579.58} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:38:10.864, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='JTJAMSUELLAEMFVPQDDVPFDQIABFMD', price=579.58}=1}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:38:10.864, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:41:15.339, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:41:15.339, closeTime=2017-12-14T16:41:15.344} is closed ad it can't be updated 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:41:15.356, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:41:15.360, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:41:15.365, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:41:15.366, closeTime=null} saved 
+Bill Bill{billId=5, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:41:15.366, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:41:15.382, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Product AbstractProduct{id=1, name='CWSWAWBDMSMKNMTQHDQRUCVEMROBXH', price=980.46} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:41:15.397, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='CWSWAWBDMSMKNMTQHDQRUCVEMROBXH', price=980.46}=1}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:41:15.397, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:44:03.866, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=2.0}=2}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:44:03.866, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:44:03.866, closeTime=null} was updated 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:44:03.881, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=246.0}=2}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:44:03.881, closeTime=null} was updated 
+Bill Bill{billId=3, productsMap={}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:44:03.897, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=12313.42}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:44:03.897, closeTime=null} was updated 
+Bill Bill{billId=4, productsMap={}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:44:03.912, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=24626.84}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:44:03.912, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:44:03.866, closeTime=2017-12-14T16:44:03.912} is closed ad it can't be updated 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:44:03.881, closeTime=2017-12-14T16:44:03.912} is closed ad it can't be updated 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:44:03.897, closeTime=2017-12-14T16:44:03.931} is closed ad it can't be updated 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=2, AbstractProduct{id=1, name='1', price=6.0}=1}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:44:03.912, closeTime=2017-12-14T16:44:03.936} is closed ad it can't be updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=18.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:44:03.866, closeTime=2017-12-14T16:44:03.912} removed 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:44:08.289, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=2.0}=2}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:44:08.289, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:44:08.289, closeTime=null} was updated 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:44:08.305, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=246.0}=2}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:44:08.305, closeTime=null} was updated 
+Bill Bill{billId=3, productsMap={}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:44:08.315, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=12313.42}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:44:08.315, closeTime=null} was updated 
+Bill Bill{billId=4, productsMap={}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:44:08.325, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=24626.84}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:44:08.325, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:44:08.289, closeTime=2017-12-14T16:44:08.336} is closed ad it can't be updated 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:44:08.305, closeTime=2017-12-14T16:44:08.348} is closed ad it can't be updated 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:44:08.315, closeTime=2017-12-14T16:44:08.366} is closed ad it can't be updated 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=2, AbstractProduct{id=1, name='1', price=6.0}=1}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:44:08.325, closeTime=2017-12-14T16:44:08.366} is closed ad it can't be updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=18.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:44:08.289, closeTime=2017-12-14T16:44:08.336} removed 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:44:08.381, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:44:08.381, closeTime=2017-12-14T16:44:08.381} is closed ad it can't be updated 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:44:08.397, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:44:08.397, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:44:08.397, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:44:08.413, closeTime=null} saved 
+Bill Bill{billId=5, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:44:08.428, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:44:08.448, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Product AbstractProduct{id=1, name='SCPBVPITCYHBONDCPDYKOMTQVVNCBA', price=195.78} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:44:08.464, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='SCPBVPITCYHBONDCPDYKOMTQVVNCBA', price=195.78}=1}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:44:08.464, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-14T16:45:15.913, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-14T16:45:15.913, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-14T16:45:15.913, closeTime=null} removed 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.442, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=2.0}=2}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.442, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.442, closeTime=null} was updated 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.448, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=246.0}=2}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.448, closeTime=null} was updated 
+Bill Bill{billId=3, productsMap={}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.463, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=12313.42}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.463, closeTime=null} was updated 
+Bill Bill{billId=4, productsMap={}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.479, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=24626.84}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.479, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.442, closeTime=2017-12-14T16:45:22.479} is closed ad it can't be updated 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.448, closeTime=2017-12-14T16:45:22.495} is closed ad it can't be updated 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.463, closeTime=2017-12-14T16:45:22.495} is closed ad it can't be updated 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=2, AbstractProduct{id=1, name='1', price=6.0}=1}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.479, closeTime=2017-12-14T16:45:22.495} is closed ad it can't be updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=18.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.442, closeTime=2017-12-14T16:45:22.479} removed 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:45:22.510, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:45:22.510, closeTime=2017-12-14T16:45:22.510} is closed ad it can't be updated 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:45:22.526, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:45:22.526, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:45:22.544, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:45:22.548, closeTime=null} saved 
+Bill Bill{billId=5, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:45:22.550, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.550, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.550, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-14T16:45:22.550, closeTime=null} removed 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:45:22.566, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Product AbstractProduct{id=1, name='XBTDAISYEPSYROXFKCWBLFMQLEYHTY', price=695.62} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:45:22.581, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='XBTDAISYEPSYROXFKCWBLFMQLEYHTY', price=695.62}=1}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:45:22.581, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='ghjj', login='jhk', password='ghk'}, amountPrice=0.0, openTime=2017-12-14T16:46:20.612, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.565, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=2.0}=2}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.565, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.565, closeTime=null} was updated 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.580, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=246.0}=2}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.580, closeTime=null} was updated 
+Bill Bill{billId=3, productsMap={}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.580, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=12313.42}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.580, closeTime=null} was updated 
+Bill Bill{billId=4, productsMap={}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.596, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=24626.84}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.596, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.565, closeTime=2017-12-14T16:46:24.596} is closed ad it can't be updated 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.580, closeTime=2017-12-14T16:46:24.612} is closed ad it can't be updated 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.580, closeTime=2017-12-14T16:46:24.612} is closed ad it can't be updated 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=2, AbstractProduct{id=1, name='1', price=6.0}=1}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.596, closeTime=2017-12-14T16:46:24.612} is closed ad it can't be updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=18.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.565, closeTime=2017-12-14T16:46:24.596} removed 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:24.643, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:24.643, closeTime=2017-12-14T16:46:24.659} is closed ad it can't be updated 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:24.668, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:24.669, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:24.669, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:24.669, closeTime=null} saved 
+Bill Bill{billId=5, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:24.684, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.684, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.684, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.684, closeTime=null} removed 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:24.700, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Product AbstractProduct{id=1, name='OGLXBHFYXITSDGNXSPYNQRRTKTLPOV', price=120.45} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:24.716, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='OGLXBHFYXITSDGNXSPYNQRRTKTLPOV', price=120.45}=1}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:24.716, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='ghjj', login='jhk', password='ghk'}, amountPrice=0.0, openTime=2017-12-14T16:46:24.732, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.359, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=2.0}=2}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.359, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.359, closeTime=null} was updated 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.365, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=246.0}=2}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.365, closeTime=null} was updated 
+Bill Bill{billId=3, productsMap={}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.381, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=12313.42}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.381, closeTime=null} was updated 
+Bill Bill{billId=4, productsMap={}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.396, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=24626.84}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.396, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.359, closeTime=2017-12-14T16:46:30.412} is closed ad it can't be updated 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.365, closeTime=2017-12-14T16:46:30.412} is closed ad it can't be updated 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.381, closeTime=2017-12-14T16:46:30.412} is closed ad it can't be updated 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=2, AbstractProduct{id=1, name='1', price=6.0}=1}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.396, closeTime=2017-12-14T16:46:30.430} is closed ad it can't be updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=18.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.359, closeTime=2017-12-14T16:46:30.412} removed 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:30.447, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:30.447, closeTime=2017-12-14T16:46:30.447} is closed ad it can't be updated 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:30.463, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:30.463, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:30.481, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:30.487, closeTime=null} saved 
+Bill Bill{billId=5, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:30.493, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.499, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.499, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.499, closeTime=null} removed 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:30.514, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Product AbstractProduct{id=1, name='LTFBCJCJYJJJDDPGCCHECHAFNJAOGX', price=940.87} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:30.530, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='LTFBCJCJYJJJDDPGCCHECHAFNJAOGX', price=940.87}=1}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:46:30.530, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='ghjj', login='jhk', password='ghk'}, amountPrice=0.0, openTime=2017-12-14T16:46:30.550, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.050, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=2.0}=2}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.050, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.050, closeTime=null} was updated 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.081, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=246.0}=2}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.081, closeTime=null} was updated 
+Bill Bill{billId=3, productsMap={}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.097, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=12313.42}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.097, closeTime=null} was updated 
+Bill Bill{billId=4, productsMap={}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.112, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=24626.84}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.112, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.050, closeTime=2017-12-14T16:48:52.128} is closed ad it can't be updated 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.081, closeTime=2017-12-14T16:48:52.128} is closed ad it can't be updated 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.097, closeTime=2017-12-14T16:48:52.144} is closed ad it can't be updated 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=2, AbstractProduct{id=1, name='1', price=6.0}=1}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.112, closeTime=2017-12-14T16:48:52.144} is closed ad it can't be updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=18.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.050, closeTime=2017-12-14T16:48:52.128} removed 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:48:52.169, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:48:52.169, closeTime=2017-12-14T16:48:52.169} is closed ad it can't be updated 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:48:52.184, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:48:52.184, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:48:52.184, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:48:52.184, closeTime=null} saved 
+Bill Bill{billId=5, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:48:52.200, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.200, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.200, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.200, closeTime=null} removed 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:48:52.231, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Product AbstractProduct{id=1, name='ARAMPPWLSJQTRQJJLLQHSLQIKYMOOM', price=379.48} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:48:52.250, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='ARAMPPWLSJQTRQJJLLQHSLQIKYMOOM', price=379.48}=1}, employee=null, amountPrice=0.0, openTime=2017-12-14T16:48:52.250, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='ghjj', login='jhk', password='ghk'}, amountPrice=0.0, openTime=2017-12-14T16:48:52.262, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-15T09:40:54.890, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=2.0}=2}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-15T09:40:54.890, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-15T09:40:54.890, closeTime=null} was updated 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-15T09:40:54.914, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=246.0}=2}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-15T09:40:54.914, closeTime=null} was updated 
+Bill Bill{billId=3, productsMap={}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-15T09:40:54.939, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=12313.42}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-15T09:40:54.939, closeTime=null} was updated 
+Bill Bill{billId=4, productsMap={}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-15T09:40:54.959, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=24626.84}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-15T09:40:54.959, closeTime=null} was updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=6.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-15T09:40:54.890, closeTime=2017-12-15T09:40:54.972} is closed ad it can't be updated 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='1', price=6.0}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wse', password='rse'}, amountPrice=0.0, openTime=2017-12-15T09:40:54.914, closeTime=2017-12-15T09:40:54.979} is closed ad it can't be updated 
+Bill Bill{billId=3, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=1, AbstractProduct{id=2, name='2', price=492.0}=2}, employee=Employee{fullName='ad', login='wsd', password='res'}, amountPrice=0.0, openTime=2017-12-15T09:40:54.939, closeTime=2017-12-15T09:40:54.985} is closed ad it can't be updated 
+Bill Bill{billId=4, productsMap={AbstractProduct{id=3, name='3', price=49252.168}=2, AbstractProduct{id=1, name='1', price=6.0}=1}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-15T09:40:54.959, closeTime=2017-12-15T09:40:54.998} is closed ad it can't be updated 
+Bill Bill{billId=1, productsMap={AbstractProduct{id=1, name='1', price=18.0}=3}, employee=Employee{fullName='d', login='we', password='re'}, amountPrice=0.0, openTime=2017-12-15T09:40:54.890, closeTime=2017-12-15T09:40:54.972} removed 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-15T09:40:55.030, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-15T09:40:55.030, closeTime=2017-12-15T09:40:55.037} is closed ad it can't be updated 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-15T09:40:55.053, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-15T09:40:55.060, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-15T09:40:55.067, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-15T09:40:55.074, closeTime=null} saved 
+Bill Bill{billId=5, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-15T09:40:55.081, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-15T09:40:55.088, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-15T09:40:55.088, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='1', login='1', password='1'}, amountPrice=0.0, openTime=2017-12-15T09:40:55.088, closeTime=null} removed 
+Employee was created: FullName asd login asd and password asd, result false
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-15T09:40:55.116, closeTime=null} saved 
+Employee was created: FullName asd login asd and password asd, result false
+Product AbstractProduct{id=1, name='MMMNNNESCDENVIHTXPILBCJEEYKCLI', price=651.65} saved 
+Bill Bill{billId=1, productsMap={}, employee=null, amountPrice=0.0, openTime=2017-12-15T09:40:55.142, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={AbstractProduct{id=1, name='MMMNNNESCDENVIHTXPILBCJEEYKCLI', price=651.65}=1}, employee=null, amountPrice=0.0, openTime=2017-12-15T09:40:55.142, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='ghjj', login='jhk', password='ghk'}, amountPrice=0.0, openTime=2017-12-15T09:40:55.155, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='', login='asd', password='asd'}, amountPrice=0.0, openTime=2018-01-02T11:12:29.777, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='', login='asd', password='asd'}, amountPrice=0.0, openTime=2018-01-02T11:14:14.955, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={}, employee=Employee{fullName='', login='asd', password='asd'}, amountPrice=0.0, openTime=2018-01-02T11:16:02.029, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='', login='asd', password='asd'}, amountPrice=0.0, openTime=2018-01-03T12:14:49.873, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='', login='asd', password='asd'}, amountPrice=0.0, openTime=2018-01-03T12:16:21.931, closeTime=null} saved 
+Bill Bill{billId=3, productsMap={}, employee=Employee{fullName='', login='asd', password='asd'}, amountPrice=0.0, openTime=2018-01-03T12:19:34.295, closeTime=null} saved 
+Bill Bill{billId=4, productsMap={}, employee=Employee{fullName='', login='asd', password='asd'}, amountPrice=0.0, openTime=2018-01-03T12:50:47.148, closeTime=null} saved 
+Bill Bill{billId=5, productsMap={}, employee=Employee{fullName='', login='asd', password='asd'}, amountPrice=0.0, openTime=2018-01-03T12:55:13.481, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='', login='asd', password='asd'}, amountPrice=0.0, openTime=2018-01-03T14:14:53.309, closeTime=null} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='', login='asd', password='asd'}, amountPrice=0.0, openTime=2018-01-04T09:38:05.607, closeTime=null} saved 
+Product AbstractProduct{id=1, name='asd', price=1.1} saved 
+Product AbstractProduct{id=2, name='asd', price=1.1} saved 
+Product AbstractProduct{id=3, name='asd', price=1.1} saved 
+Bill Bill{billId=1, productsMap={}, employee=Employee{fullName='', login='asd', password='asd'}, amountPrice=0.0, openTime=2018-01-04T16:54:18.906, closeTime=null} saved 
+Bill Bill{billId=2, productsMap={}, employee=Employee{fullName='', login='asd', password='asd'}, amountPrice=0.0, openTime=2018-01-04T16:54:39.554, closeTime=null} saved 
+Product AbstractProduct{id=1, name='asd', price=null} saved 

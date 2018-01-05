@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ua.artcode.market.interfaces.ITerminalControllerTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2017-11-23T23:25:29" hostname="DESKTOP-OQ9UNTJ" time="0.256">
+  <properties/>
+  <testcase name="createSalesman" classname="ua.artcode.market.interfaces.ITerminalControllerTest" time="0.022"/>
+  <testcase name="filter" classname="ua.artcode.market.interfaces.ITerminalControllerTest" time="0.112"/>
+  <testcase name="login1" classname="ua.artcode.market.interfaces.ITerminalControllerTest" time="0.006"/>
+  <testcase name="closeBill" classname="ua.artcode.market.interfaces.ITerminalControllerTest" time="0.011"/>
+  <testcase name="getAllBills" classname="ua.artcode.market.interfaces.ITerminalControllerTest" time="0.026"/>
+  <testcase name="saveAndRemoveBill" classname="ua.artcode.market.interfaces.ITerminalControllerTest" time="0.02"/>
+  <testcase name="login" classname="ua.artcode.market.interfaces.ITerminalControllerTest" time="0.015"/>
+  <testcase name="createBill" classname="ua.artcode.market.interfaces.ITerminalControllerTest" time="0.01"/>
+  <testcase name="addProduct" classname="ua.artcode.market.interfaces.ITerminalControllerTest" time="0.02"/>
+  <testcase name="calculateAmountPrice" classname="ua.artcode.market.interfaces.ITerminalControllerTest" time="0.011"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

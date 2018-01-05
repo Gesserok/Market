@@ -1,0 +1,31 @@
+.header {
+    background-color: #f44336;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    visibility: visible;
+}
+
+/* Clear floats after the header */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button {
+    padding: 2px;
+    width: 25%;
+    background: #d9d9d9;
+    text-align: center;
+    color: #055512;
+    /*float: left;*/
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline;
+}
+
+.button:hover {
+background-color: #bbb;
+}

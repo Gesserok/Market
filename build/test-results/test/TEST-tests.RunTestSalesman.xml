@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.RunTestSalesman" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-11-14T10:50:33" hostname="DESKTOP-OQ9UNTJ" time="0.008">
+  <properties/>
+  <testcase name="testSalesmanCreation1" classname="tests.RunTestSalesman" time="0.0"/>
+  <testcase name="testSalesmanCreation2" classname="tests.RunTestSalesman" time="0.001"/>
+  <testcase name="testSalesmanCreateBill" classname="tests.RunTestSalesman" time="0.0"/>
+  <testcase name="testSalesmanCreateBill2" classname="tests.RunTestSalesman" time="0.0"/>
+  <testcase name="testSalesmanCreateBill3" classname="tests.RunTestSalesman" time="0.001"/>
+  <testcase name="testSalesmanCreation" classname="tests.RunTestSalesman" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>IAppDbProxy.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">AntonBabunin</a> &gt; <a href="index.source.html" class="el_package">ua.artcode.market.controllers</a> &gt; <span class="el_source">IAppDbProxy.java</span></div><h1>IAppDbProxy.java</h1><pre class="source lang-java linenums">package ua.artcode.market.controllers;
+
+import ua.artcode.market.interfaces.IAppDb;
+import ua.artcode.market.interfaces.ILogging;
+import ua.artcode.market.models.Bill;
+import ua.artcode.market.models.Product;
+import ua.artcode.market.models.Salesman;
+
+import java.io.*;
+import java.time.LocalDateTime;
+import java.util.*;
+
+public class IAppDbProxy implements IAppDb, ILogging{
+
+    private IAppDb target;
+    private ILogging iLogging;
+
+
+<span class="fc" id="L19">    public IAppDbProxy(IAppDb target) throws IOException {</span>
+<span class="fc" id="L20">        this.target = target;</span>
+<span class="fc" id="L21">        this.iLogging = ILoggingImpl.getGetInstance();</span>
+<span class="fc" id="L22">    }</span>
+
+    @Override
+    public void write(String messege) throws IOException {
+<span class="nc" id="L26">        iLogging.write(messege);</span>
+<span class="nc" id="L27">    }</span>
+
+    @Override
+    public Map&lt;Product, Integer&gt; getProducts() {
+<span class="nc" id="L31">        return target.getProducts();</span>
+    }
+
+    @Override
+    public List&lt;Bill&gt; getBills() {
+<span class="fc" id="L36">        return target.getBills();</span>
+    }
+
+    @Override
+    public Map&lt;Product, Integer&gt; getAllProducts() {
+<span class="fc" id="L41">        return target.getAllProducts();</span>
+    }
+
+    @Override
+    public List&lt;Salesman&gt; getAllSalesmans() {
+<span class="nc" id="L46">        return iLogging.getAllSalesmans();</span>
+    }
+
+    @Override
+    public Bill findBillById(int id) {
+<span class="fc" id="L51">        return target.findBillById(id);</span>
+    }
+
+    @Override
+    public Product findProductById(int id) {
+<span class="fc" id="L56">        return target.findProductById(id);</span>
+    }
+
+    @Override
+    public Salesman findSalesmanByLogin(String login) {
+<span class="nc" id="L61">        return iLogging.findSalesmanByLogin(login);</span>
+    }
+
+    @Override
+    public List&lt;Bill&gt; filter(Salesman salesman, Product product,
+                            LocalDateTime startDate, LocalDateTime endDate,
+                            Comparator&lt;Bill&gt; billComparator) {
+<span class="fc" id="L68">        return target.filter(salesman, product, startDate, endDate,</span>
+                billComparator);
+    }
+
+    @Override
+    public Bill removeBill(int id) throws IOException {
+<span class="fc" id="L74">        Bill bill = target.removeBill(id);</span>
+<span class="fc" id="L75">        String messege = null;</span>
+<span class="pc bpc" id="L76" title="1 of 2 branches missed.">        if (bill == null) {</span>
+<span class="nc" id="L77">            messege = String.format(&quot;Bill %s not found \r\n&quot;, bill);</span>
+<span class="nc" id="L78">            iLogging.write(messege);</span>
+<span class="nc" id="L79">            return null;</span>
+        }
+<span class="fc" id="L81">        messege = String.format(&quot;Bill %s removed \r\n&quot;, bill);</span>
+<span class="fc" id="L82">        iLogging.write(messege);</span>
+<span class="fc" id="L83">        return bill;</span>
+    }
+
+    @Override
+    public Product removeProduct(int id) throws IOException {
+<span class="nc" id="L88">        Product product1 = target.removeProduct(id);</span>
+<span class="nc" id="L89">        String messege = null;</span>
+<span class="nc bnc" id="L90" title="All 2 branches missed.">        if (product1 == null) {</span>
+<span class="nc" id="L91">            messege = String.format(&quot;Product %s wasn't removed \r\n&quot;, product1);</span>
+<span class="nc" id="L92">            iLogging.write(messege);</span>
+<span class="nc" id="L93">            return null;</span>
+        }
+<span class="nc" id="L95">        messege = String.format(&quot;Product %s saved \r\n&quot;, product1);</span>
+<span class="nc" id="L96">        iLogging.write(messege);</span>
+<span class="nc" id="L97">        return product1;</span>
+    }
+
+    @Override
+    public Bill saveBill(Bill bill) throws IOException {
+<span class="fc" id="L102">        Bill bill1 = target.saveBill(bill);</span>
+<span class="fc" id="L103">        String messege = null;</span>
+<span class="fc bfc" id="L104" title="All 2 branches covered.">        if (bill1 == null) {</span>
+<span class="fc" id="L105">            messege = String.format(&quot;Bill %s wasn't saved \r\n&quot;, bill1);</span>
+<span class="fc" id="L106">            iLogging.write(messege);</span>
+<span class="fc" id="L107">            return null;</span>
+        }
+<span class="fc" id="L109">        messege = String.format(&quot;Bill %s saved \r\n&quot;, bill1);</span>
+<span class="fc" id="L110">        iLogging.write(messege);</span>
+<span class="fc" id="L111">        return bill1;</span>
+    }
+
+    @Override
+    public Product saveProduct(Product product) throws IOException {
+<span class="nc" id="L116">        Product product1 = target.saveProduct(product);</span>
+<span class="nc" id="L117">        String messege = null;</span>
+<span class="nc bnc" id="L118" title="All 2 branches missed.">        if (product1 == null) {</span>
+<span class="nc" id="L119">            messege = String.format(&quot;Product %s wasn't saved \r\n&quot;, product1);</span>
+<span class="nc" id="L120">            iLogging.write(messege);</span>
+<span class="nc" id="L121">            return null;</span>
+        }
+<span class="nc" id="L123">        messege = String.format(&quot;Product %s saved \r\n&quot;, product1);</span>
+<span class="nc" id="L124">        iLogging.write(messege);</span>
+<span class="nc" id="L125">        return product1;</span>
+    }
+
+    @Override
+    public final Bill update(Bill bill) throws IOException {
+<span class="fc" id="L130">        Bill found = target.update(bill);</span>
+<span class="fc" id="L131">        String messege = null;</span>
+<span class="fc bfc" id="L132" title="All 2 branches covered.">        if (bill.getCloseTime() != null) {</span>
+<span class="fc" id="L133">            messege = String.format(&quot;Bill %s is closed ad it can't be &quot; +</span>
+                            &quot;updated \r\n&quot;, bill);
+<span class="fc" id="L135">            iLogging.write(messege);</span>
+<span class="fc" id="L136">            return null;</span>
+        }
+<span class="pc bpc" id="L138" title="1 of 2 branches missed.">        if (found == null){</span>
+<span class="nc" id="L139">            messege = String.format(&quot;Bill %s not found \r\n&quot;, bill);</span>
+<span class="nc" id="L140">            iLogging.write(messege);</span>
+<span class="nc" id="L141">            return found;</span>
+        }
+<span class="fc" id="L143">        messege = String.format(&quot;Bill %s was updated \r\n&quot;, bill);</span>
+<span class="fc" id="L144">        iLogging.write(messege);</span>
+<span class="fc" id="L145">        return found;</span>
+    }
+
+    @Override
+    public Salesman createSalesman(String fullName, String login,
+                                   String password) throws IOException {
+<span class="fc" id="L151">        boolean result = false;</span>
+<span class="fc" id="L152">        Salesman salesman = iLogging.createSalesman(fullName, login, password);</span>
+<span class="fc bfc" id="L153" title="All 2 branches covered.">        if (salesman != null) {</span>
+<span class="fc" id="L154">            result = true;</span>
+        }
+<span class="fc" id="L156">        iLogging.write(String.format(&quot;Salesman was created: &quot; +</span>
+                        &quot;FullName %s login %s and password %s, result %s\r\n&quot;,
+<span class="fc" id="L158">                fullName, login, password, result));</span>
+
+<span class="fc" id="L160">        return salesman;</span>
+    }
+
+    @Override
+    public Salesman login(String login, String password) throws IOException {
+
+<span class="fc" id="L166">        boolean result = false;</span>
+<span class="fc" id="L167">        Salesman salesman = iLogging.login(login, password);</span>
+<span class="fc bfc" id="L168" title="All 2 branches covered.">        if (salesman != null) {</span>
+<span class="fc" id="L169">            result = true;</span>
+        }
+<span class="fc" id="L171">        iLogging.write(String.format(&quot;Salesman try connect with login %s &quot; +</span>
+                        &quot;and password %s,&quot; + &quot;result %s\r\n&quot;,
+<span class="fc" id="L173">                        login, password, result));</span>
+<span class="fc" id="L174">        return salesman;</span>
+    }
+
+    @Override
+    public Salesman logout(Salesman salesman) throws IOException {
+<span class="nc" id="L179">        boolean result = false;</span>
+<span class="nc" id="L180">        Salesman salesman1 = iLogging.logout(salesman);</span>
+<span class="nc bnc" id="L181" title="All 2 branches missed.">        if (salesman1 != null) {</span>
+<span class="nc" id="L182">            result = true;</span>
+        }
+<span class="nc" id="L184">        iLogging.write(String.format(&quot;Salesman was logout with login %s &quot; +</span>
+                        &quot;and password %s,&quot; + &quot;result %s\r\n&quot;,
+<span class="nc" id="L186">                salesman1.getLogin(), salesman1.getPassword(), result));</span>
+<span class="nc" id="L187">        return salesman1;</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.8.201612092310</span></div></body></html>
